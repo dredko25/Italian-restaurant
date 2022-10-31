@@ -31,7 +31,7 @@ body {
     flex-direction: column;
 }
 .container {
-    max-width: 1200px;
+    max-width: 1600px;
     margin: 0 auto;
     padding: 0px 15px;
     color: inherit;
@@ -72,7 +72,7 @@ body {
     text-decoration: underline;
 }
 
-.page {
+.background_photo {
     background: url(photo/background1.png) no-repeat;
     background-size: 100%;
     height: 944px;
@@ -80,10 +80,9 @@ body {
 .main-block {
     display: flex;
     flex-direction: column;
-    min-height: 944px;
+    height: 944px;
     align-items: center;
     justify-content: center;
-
 }
 .main-slogan {
     font-family: 'Great Vibes';
@@ -98,6 +97,10 @@ body {
     height: 944px;
     display: flex;
 }
+.desc-photo {
+    width: 45%;
+    object-fit: cover;
+}
 .second-block {
     color: black;
     display: flex;
@@ -109,20 +112,132 @@ body {
 }
 .title {
     font-weight: 400;
-    font-size: 64px;
+    font-size: 48px;
     line-height: 0.5;
 }
 .subtitle {
     font-weight: 400;
-    font-size: 36px;
+    font-size: 32px;
     line-height: 3;
 }
 .description {
     font-weight: 300;
-    font-size: 40px;
+    font-size: 24px;
     line-height: 1.2;
 }
-
+.section-menu {
+}
+.header-our-menu {
+    background-image: url(photo/our-menu.png);
+    background-size: 100%;
+    height: 300px;
+    width: 100%;
+}
+.our-menu {
+    font-family: 'Great Vibes';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 128px;
+    display: flex;
+    height: 300px;
+    justify-content: center;
+    align-items: center;
+}
+.menu-items {
+}
+.menu-items-list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: space-between;
+    justify-content: space-around;
+}
+.menu-item-list {
+    width: 721px;
+    height: 301px;
+    margin-top: 50px;
+}
+.category-name {
+    font-family: 'Great Vibes';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 128px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 721px;
+    height: 301px;
+}
+#Pasta, #Soup, #Bruschetta, #Pizza, #Desserts, #Specials {
+    background-size: 100%;
+}
+#Pasta {
+    background-image: url(photo/menu/pasta-main-cut.png);
+}
+#Soup {
+    background-image: url(photo/menu/Soup-main-cut.png);
+}
+#Bruschetta {
+    background-image: url(photo/menu/bruschetta-main-cut.png);
+}
+#Pizza {
+    background-image: url(photo/menu/pizza-main-cut.png);
+}
+#Desserts {
+    background-image: url(photo/menu/dessert-main-cut.png);
+}
+#Specials {
+    background-image: url(photo/menu/specials-main-cut.png);
+}
+.footer {
+    margin-top: 50px;
+    padding-top: 30px;
+    background-color: #405B6E;
+    color: white;
+    height: 550px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.footer-logo {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    font-weight: 400;
+    font-family: 'Saira Condensed';
+    gap: 20px;
+}
+.social-media {
+    display: inline-flex;
+    gap: 30px;
+}
+.hours, .contacts-item {
+    font-family: 'Saira Condensed';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 48px;
+}
+.hours {
+    font-size: 64px;
+}
+#cont {
+    text-decoration: underline;
+}
+.copyright {
+    font-family: 'Saira Condensed';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 24px;
+}
+/* @media (max-width: 1440px) {
+    .background_photo {
+    }
+    .main-block {
+    }
+} */
 @media (max-width: 1199.98px) {
     .container {
         max-width: 970px; 
