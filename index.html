@@ -7,32 +7,32 @@
     <title>Bruschetta</title>
     <link href="https://fonts.googleapis.com/css?family=Great+Vibes:regular&display=swap" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css?family=Saira+Condensed:300,regular&display=swap" rel="stylesheet" />
-    <script src="script.js"></script>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="wrapper">
+        <a id="home" class="in-page-link"></a>
         <header class="header">
-            <a href="" class="container header-logo">
+            <a href="#home" class="container header-logo">
                 <img src="photo/restaurant-logo.png" alt="logo" class="photo-logo">
                 <h1 class="name-restaurant">Bruschetta</h1>
             </a>
             <nav class="container header-menu">
                 <ul class="menu-list">
                     <li class="menu-item">
-                        <a href="" class="menu-link">Home</a>
+                        <a href="#home" class="menu-link">Home</a>
                     </li>
                     <li class="menu-item">
-                        <a href="" class="menu-link">About</a>
+                        <a href="#about" class="menu-link">About</a>
                     </li>
                     <li class="menu-item">
-                        <a href="" class="menu-link">Menu</a>
+                        <a href="#menu" class="menu-link">Menu</a>
                     </li>
                     <li class="menu-item">
                         <a href="" class="menu-link">Basket</a>
                     </li>
                     <li class="menu-item">
-                        <a href="" class="menu-link">Contacts</a>
+                        <a href="#contacts" class="menu-link">Contacts</a>
                     </li>
                 </ul>
             </nav>
@@ -45,6 +45,7 @@
                 </section>
             </div>
             <div class="desc">
+                <a id="about" class="in-page-link"></a>
                 <img src="photo/photo-s2.webp" alt="photo" class="desc-photo">
                 <section class="container second-block">
                     <h1 class="title">Description of the restaurant</h1>
@@ -53,44 +54,46 @@
                 </section>
             </div>
             <div class="section-menu">
+                <a id="menu" class="in-page-link"></a>
                 <section class="header-our-menu">
                     <h1 class="our-menu">Our menu</h1>
                 </section>
                 <section class="menu-items">
                     <ul class="menu-items-list container">
                         <li id="Pasta" class="menu-item-list">
-                            <h1 class="category-name">Pasta</h1>
+                            <a href="Pasta.html" class="category-name">Pasta</a>
                         </li>
                         <li id="Soup" class="menu-item-list">
-                            <h1 class="category-name">Soup</h1>
+                            <a href="Soup.html" class="category-name">Soup</a>
                         </li>
                         <li id="Bruschetta" class="menu-item-list">
-                            <h1 class="category-name">Bruschetta</h1>
+                            <a href="Bruschetta.html" class="category-name">Bruschetta</a>
                         </li>
                         <li id="Pizza" class="menu-item-list">
-                            <h1 class="category-name">Pizza</h1>
+                            <a href="Pizza.html" class="category-name">Pizza</a>
                         </li>
                         <li id="Desserts" class="menu-item-list">
-                            <h1 class="category-name">Desserts</h1>
+                            <a href="Desserts.html" class="category-name">Desserts</a>
                         </li>
                         <li id="Specials" class="menu-item-list">
-                            <h1 class="category-name">Specials</h1>
+                            <a href="Specials.html" class="category-name">Specials</a>
                         </li>
                     </ul>
                 </section>
             </div>
         </main>
         <footer class="footer">
-            <a href="" class="footer-logo">
+            <a id="contacts" class="in-page-link"></a>
+            <a href="#home" class="footer-logo">
                 <img src="photo/restaurant-logo.png" alt="logo" class="photo-logo">
                 <h1 class="name-restaurant">Bruschetta</h1>
             </a>
             <div class="social-media">
-                <a href="" class="inst">
-                    <img src="photo/instagram.png" alt="logo" class="photo-logo">
+                <a href="https://www.instagram.com/" target="_blank" class="inst">
+                    <img src="photo/instagram.png" alt="logo" class="media-logo">
                 </a>
-                <a href="" class="facebook">
-                    <img src="photo/facebook.png" alt="logo" class="photo-logo">
+                <a href="https://www.facebook.com/" target="_blank" class="facebook">
+                    <img src="photo/facebook.png" alt="logo" class="media-logo">
                 </a>
             </div>
             <div class="hours">
@@ -104,5 +107,6 @@
             </div>
         </footer>
     </div>
+    <script src="script.js"></script>
 </body>
 </html>

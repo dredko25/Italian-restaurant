@@ -1,0 +1,77 @@
+.background_photo {
+    height: 126px;
+}
+.category-name {
+    color: black;
+    font-family: 'Great Vibes';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 128px;
+    width: 100%;
+    margin-top: 130px;
+}
+.category-items {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.category-item {
+    border: 1px solid black;
+    width: 402px;
+    height: 480px;
+    margin-bottom: 50px;
+}
+.item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 400px;
+    height: 480px;
+}
+.item-photo {
+    width: 400px;
+    height: 247px;
+    object-fit: cover;
+}
+.item-name, .item-desc, .item-weight, .item-price, .buy {
+    color: black;
+    font-family: 'Saira Condensed';
+    font-style: normal;
+    font-weight: 400;
+}
+.item-name {
+    font-size: 36px;
+    line-height: 57px;
+}
+.item-desc {
+    font-size: 20px;
+    line-height: 20px;
+    text-align: center;
+    height: 70px;
+    width: 85%;
+}
+.item-weight {
+    font-size: 24px;
+    font-weight: 400;
+}
+.button {
+    border: 1px solid black;
+    margin-top: 3%;
+    display: inline-flex;
+    height: 50px;
+}
+.item-price {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 32px;
+    width: 77px;
+    background-color: aliceblue;
+    border-right: 1px solid black;
+}
+.buy {
+    font-size: 24px;
+    width: 148px;
+}
+
+
