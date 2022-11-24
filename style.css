@@ -130,16 +130,16 @@ body {
 .header-our-menu {
     background-image: url(photo/our-menu.png);
     background-size: 100%;
-    height: 300px;
+    height: 200px;
     width: 100%;
 }
 .our-menu {
     font-family: 'Great Vibes';
     font-style: normal;
     font-weight: 400;
-    font-size: 128px;
+    font-size: 90px;
     display: flex;
-    height: 300px;
+    height: 200px;
     justify-content: center;
     align-items: center;
 }
@@ -153,20 +153,20 @@ body {
     justify-content: space-around;
 }
 .menu-item-list {
-    width: 721px;
-    height: 301px;
+    width: 478px;
+    height: 200px;
     margin-top: 50px;
 }
 .category-name {
     font-family: 'Great Vibes';
     font-style: normal;
     font-weight: 400;
-    font-size: 128px;
+    font-size: 72px;
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 721px;
-    height: 301px;
+    width: 100%;
+    height: 100%;
 }
 #Pasta, #Soup, #Bruschetta, #Pizza, #Desserts, #Specials {
     background-size: 100%;
@@ -193,11 +193,22 @@ body {
     margin-top: 50px;
     background-color: #405B6E;
     color: white;
-    height: 350px;
+    height: 200px;
     width: 100%;
+}
+.footer-content {
+    height: 200px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+.footer-center {
     display: flex;
     align-items: center;
     flex-direction: column;
+    height: 100%;
     justify-content: space-around;
 }
 .footer-logo {
@@ -224,10 +235,16 @@ body {
     font-size: 24px;
 }
 .hours {
-    font-size: 32px;
+    font-size: 28px;
 }
 #cont {
     text-decoration: underline;
+}
+.our-contacts {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    line-height: 1.5;
 }
 .copyright {
     font-family: 'Saira Condensed';

@@ -6,31 +6,31 @@
     font-family: 'Great Vibes';
     font-style: normal;
     font-weight: 400;
-    font-size: 128px;
+    font-size: 72px;
     width: 100%;
-    margin-top: 130px;
+    margin-top: 170px;
 }
 .category-items {
     display: flex;
+    flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-between;
+    margin-top: 25px;
 }
 .category-item {
     border: 1px solid black;
-    width: 402px;
-    height: 480px;
-    margin-bottom: 50px;
+    width: 18.75%;
+    margin-bottom: 30px;
+    margin: 0.5%;
 }
 .item {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 400px;
-    height: 480px;
+    width: 100%;
+    height: 100%;
 }
 .item-photo {
-    width: 400px;
-    height: 247px;
+    width: 100%;
     object-fit: cover;
 }
 .item-name, .item-desc, .item-weight, .item-price, .buy {
@@ -40,12 +40,12 @@
     font-weight: 400;
 }
 .item-name {
-    font-size: 36px;
-    line-height: 57px;
+    font-size: 32px;
+    margin: 10px 0px;
+    text-align: center;
 }
 .item-desc {
     font-size: 20px;
-    line-height: 20px;
     text-align: center;
     height: 70px;
     width: 85%;
@@ -56,7 +56,7 @@
 }
 .button {
     border: 1px solid black;
-    margin-top: 3%;
+    margin: 3% 0%;
     display: inline-flex;
     height: 50px;
 }
@@ -73,5 +73,17 @@
     font-size: 24px;
     width: 148px;
 }
-
+.category-item {
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+.category-item:hover {
+    -moz-box-shadow: 0 0 10px #000;
+    -webkit-box-shadow: 0 0 10px #000;
+    box-shadow:0 0 10px #000; 
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
 
