@@ -1,0 +1,26 @@
+@media (max-width:579px) {
+    
+}
+@media (min-width: 580px) and (max-width:768px) {
+    
+}
+@media (min-width: 769px) and (max-width: 992px) {
+    
+}
+@media (min-width: 993px) and (max-width: 1160px) {
+    .title {
+        font-size: 38px;
+    }
+    .subtitle {
+        font-size: 24px;
+        line-height: 1.2;
+        margin: 15px 0px;
+    }
+    .description {
+        font-size: 22px;
+    }
+    .menu-item-list {
+        width: 406.3px;
+        height: 170px;
+    }
+} 

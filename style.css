@@ -74,27 +74,27 @@ body {
 
 .background_photo {
     background: url(photo/background1.png) no-repeat;
-    background-size: 100%;
-    height: 944px;
+    background-size: cover;
+    height: 100vh;
 }
 .main-block {
     display: flex;
     flex-direction: column;
-    height: 944px;
+    height: 100vh;
     align-items: center;
     justify-content: center;
 }
 .main-slogan {
     font-family: 'Great Vibes';
-    font-size: 128px;
+    font-size: 13.5vh;
     font-weight: 400;
 }
 .second-phrase {
     font-weight: 400;
-    font-size: 32px;
+    font-size: 4.4vh;
 }
 .desc{
-    height: 944px;
+    height: 100vh;
     display: flex;
 }
 .desc-photo {
@@ -112,38 +112,34 @@ body {
 }
 .title {
     font-weight: 400;
-    font-size: 48px;
+    font-size: 5vh;
     line-height: 0.5;
 }
 .subtitle {
     font-weight: 400;
-    font-size: 32px;
+    font-size: 3.4vh;
     line-height: 3;
 }
 .description {
     font-weight: 300;
-    font-size: 24px;
+    font-size: 2.5vh;
     line-height: 1.2;
-}
-.section-menu {
 }
 .header-our-menu {
     background-image: url(photo/our-menu.png);
     background-size: 100%;
-    height: 200px;
+    height: 23vh;
     width: 100%;
 }
 .our-menu {
     font-family: 'Great Vibes';
     font-style: normal;
     font-weight: 400;
-    font-size: 90px;
+    font-size: 10vh;
     display: flex;
-    height: 200px;
+    height: 23vh;
     justify-content: center;
     align-items: center;
-}
-.menu-items {
 }
 .menu-items-list {
     display: flex;
@@ -154,14 +150,14 @@ body {
 }
 .menu-item-list {
     width: 478px;
-    height: 200px;
-    margin-top: 50px;
+    height: 23vh;
+    margin: 50px 7px 0px 7px;
 }
 .category-name {
     font-family: 'Great Vibes';
     font-style: normal;
     font-weight: 400;
-    font-size: 72px;
+    font-size: 8vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -193,11 +189,11 @@ body {
     margin-top: 50px;
     background-color: #405B6E;
     color: white;
-    height: 200px;
+    height: 24vh;
     width: 100%;
 }
 .footer-content {
-    height: 200px;
+    height: 24vh;
     width: 100%;
     display: flex;
     flex-direction: row;
@@ -251,25 +247,4 @@ body {
     font-style: normal;
     font-weight: 300;
     font-size: 18px;
-}
-/* @media (max-width: 1440px) {
-    .background_photo {
-    }
-    .main-block {
-    }
-} */
-@media (max-width: 1199.98px) {
-    .container {
-        max-width: 970px; 
-    }
-}
-@media (max-width: 990.98px) {
-    .container {
-        max-width: 750px;
-    }
-}
-@media (max-width: 767.98px) {
-    .container {
-        max-width: none;
-    }
 }
