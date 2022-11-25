@@ -38,14 +38,11 @@ body {
     font-family: 'Saira Condensed';
 }
 .header {
-    display: flex;
-    justify-content: space-between;
-    min-height: 126px;
-    align-items: center;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    position: absolute;
     width: 100%;
+    position: fixed;
+    top: 0px;
+    z-index: 1000;
+    background-color: rgba(0, 0, 0, 0.5);
 }
 .header-logo {
     display: flex;
@@ -60,6 +57,15 @@ body {
 .name-restaurant {
     font-size: 26px;
 }
+.header-menu {
+    
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    min-height: 126px;
+    width: 80%;
+}
 .menu-list {
     display: flex;
     gap: 44px;
@@ -72,8 +78,25 @@ body {
     text-decoration: underline;
 }
 
+.burger {
+    display: none;
+    cursor: pointer;
+    background: transparent;
+    border: none;
+    outline: none;
+}
+.line {
+    display: block;
+    width: 25px;
+    height: 3px;
+    border-radius: 20px;
+    margin: 5px auto;
+    background-color: white;
+}
+
 .background_photo {
     background: url(photo/background1.png) no-repeat;
+    background-size: 100%;
     background-size: cover;
     height: 100vh;
 }
@@ -83,6 +106,7 @@ body {
     height: 100vh;
     align-items: center;
     justify-content: center;
+    width: 100%;
 }
 .main-slogan {
     font-family: 'Great Vibes';
@@ -113,7 +137,7 @@ body {
 .title {
     font-weight: 400;
     font-size: 5vh;
-    line-height: 0.5;
+    padding: 10px 0px;
 }
 .subtitle {
     font-weight: 400;
@@ -150,7 +174,9 @@ body {
 }
 .menu-item-list {
     width: 478px;
-    height: 23vh;
+    height: 200px;
+    /* width: 51vh;
+    height: 21vh; */
     margin: 50px 7px 0px 7px;
 }
 .category-name {

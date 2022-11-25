@@ -14,11 +14,11 @@
     <div class="wrapper">
         <a id="home" class="in-page-link"></a>
         <header class="header">
-            <a href="#home" class="container header-logo">
-                <img src="photo/restaurant-logo.png" alt="logo" class="photo-logo">
-                <h1 class="name-restaurant">Bruschetta</h1>
-            </a>
             <nav class="container header-menu">
+                <a href="#home" class="header-logo">
+                    <img src="photo/restaurant-logo.png" alt="logo" class="photo-logo">
+                    <h1 class="name-restaurant">Bruschetta</h1>
+                </a>
                 <ul class="menu-list">
                     <li class="menu-item">
                         <a href="#home" class="menu-link">Home</a>
@@ -36,6 +36,11 @@
                         <a href="#contacts" class="menu-link">Contacts</a>
                     </li>
                 </ul>
+                <button class="burger">
+                    <span class="line"></span>
+                    <span class="line"></span>
+                    <span class="line"></span>
+                </button>
             </nav>
         </header>
         <main class="page">
