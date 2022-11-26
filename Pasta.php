@@ -10,25 +10,25 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="menu.css">
     <link rel="stylesheet" href="responsive.css">
+    <link rel="stylesheet" href="responsive-menu.css">
 </head>
 <body>
     <div class="wrapper">
-        <a id="home" class="in-page-link"></a>
-        <header class="header background_photo">
-            <a href="index.php" class="container header-logo">
-                <img src="photo/restaurant-logo.png" alt="logo" class="photo-logo">
-                <h1 class="name-restaurant">Bruschetta</h1>
-            </a>
+        <header class="header">
             <nav class="container header-menu">
+                <a href="index.php" class="header-logo">
+                    <img src="photo/restaurant-logo.png" alt="logo" class="photo-logo">
+                    <h1 class="name-restaurant">Bruschetta</h1>
+                </a>
                 <ul class="menu-list">
-                    <li class="menu-item">
-                        <a href="index.php" class="menu-link">Home</a>
+                <li class="menu-item">
+                        <a href="index.php#home" class="menu-link">Home</a>
                     </li>
                     <li class="menu-item">
-                        <a href="#about" class="menu-link">About</a>
+                        <a href="index.php#about" class="menu-link">About</a>
                     </li>
                     <li class="menu-item">
-                        <a href="#menu" class="menu-link">Menu</a>
+                        <a href="index.php#menu" class="menu-link">Menu</a>
                     </li>
                     <li class="menu-item">
                         <a href="" class="menu-link">Basket</a>
@@ -37,9 +37,14 @@
                         <a href="#contacts" class="menu-link">Contacts</a>
                     </li>
                 </ul>
+                <button class="burger">
+                    <span class="line"></span>
+                    <span class="line"></span>
+                    <span class="line"></span>
+                </button>
             </nav>
         </header>
-        <main class="main container">
+        <main class="main container-menu">
             <h1 class="category-name">Pasta</h1>
             <ul class="category-items">
                 <li class="category-item">

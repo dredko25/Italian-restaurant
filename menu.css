@@ -1,5 +1,17 @@
+.header {
+    background-image: url(/photo/background2_1.png);
+    background-size: cover;
+    position: absolute;
+}
 .background_photo {
     height: 126px;
+}
+.container-menu {
+    width: 1550px;
+    margin: 0 auto;
+    padding: 0px 15px;
+    color: inherit;
+    font-family: 'Saira Condensed';
 }
 .category-name {
     color: black;
@@ -14,12 +26,11 @@
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    margin-top: 25px;
+    margin: 10px;
 }
 .category-item {
     border: 1px solid black;
-    width: 18.75%;
-    margin-bottom: 30px;
+    width: 285px;
     margin: 0.5%;
 }
 .item {
@@ -40,7 +51,7 @@
     font-weight: 400;
 }
 .item-name {
-    font-size: 32px;
+    font-size: 30px;
     margin: 10px 0px;
     text-align: center;
 }
@@ -48,7 +59,7 @@
     font-size: 20px;
     text-align: center;
     height: 70px;
-    width: 85%;
+    width: 90%;
 }
 .item-weight {
     font-size: 24px;

@@ -14,7 +14,7 @@
     .menu-list {
         position: fixed;
         left: -100%;
-        top: 100px;
+        top: 70px;
         gap: 0;
         flex-direction: column;
         background-color: #405B6E;
@@ -101,8 +101,7 @@
     }
     .copyright {
         font-size: 12px;
-    }
-    
+    }    
 }
 @media (min-width: 580px) and (max-width:768px) {
     .burger {
@@ -233,3 +232,4 @@
         height: 170px;
     }
 } 
+
