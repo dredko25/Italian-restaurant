@@ -44,7 +44,11 @@
             </nav>
         </header>
         <main class="page">
-            <div class="background_photo">
+            <div class="slider">
+                <div id="photo1" class="slide fade"></div>
+                <div id="photo2" class="slide fade"></div>
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>
                 <section class="container main-block">
                     <h1 class="main-slogan">modern Italian cuisine</h1>
                     <h2 class="second-phrase">Get the best or nothing at all</h2>
