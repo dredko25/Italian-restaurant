@@ -31,7 +31,7 @@ body {
     flex-direction: column;
 }
 .container {
-    width: 1600px;
+    max-width: 1600px;
     margin: 0 auto;
     padding: 0px 15px;
     color: inherit;

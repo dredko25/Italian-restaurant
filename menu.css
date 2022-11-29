@@ -4,7 +4,7 @@
     position: absolute;
 }
 .container-menu {
-    width: 1550px;
+    max-width: 1550px;
     margin: 0 auto;
     padding: 0px 15px;
     color: inherit;

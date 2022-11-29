@@ -108,7 +108,6 @@
                     </div>
                 </li>
             </ul>
-
         </main>
         <footer class="footer">
             <a id="contacts" class="in-page-link"></a>

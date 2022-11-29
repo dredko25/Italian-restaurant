@@ -50,8 +50,8 @@
                 <li class="category-item">
                     <div class="item">
                         <img src="photo/menu/soup/chick pea soup.png" alt="" class="item-photo">
-                        <h1 class="item-name">Pasta with sprouts</h1>
-                        <h2 class="item-desc">Pasta, sprouts of wheat</h2>
+                        <h1 class="item-name">Chickpea soup</h1>
+                        <h2 class="item-desc">Vegetable broth, vegetables, canned chickpeas, aromatics, parsley</h2>
                         <p class="item-weight">400g</p>
                         <div class="button">
                             <div class="item-price">$17</div>

@@ -74,7 +74,7 @@
                 <li class="category-item">
                     <div class="item">
                         <img src="photo/menu/pizza/hot-and-spicy-pizza.png" alt="" class="item-photo">
-                        <h1 class="item-name">Hot and spicy pizza </h1>
+                        <h1 class="item-name">Hot and spicy pizza</h1>
                         <h2 class="item-desc">Fresh tomatoes, onions, corn, mozzarella, mushrooms</h2>
                         <p class="item-weight">400g</p>
                         <div class="button">
