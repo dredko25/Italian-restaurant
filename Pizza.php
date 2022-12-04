@@ -61,7 +61,7 @@
                 </li>
                 <li class="category-item">
                     <div class="item">
-                        <img src="photo/menu/pizza/cheese pizza.png" alt="" class="item-photo">
+                        <img src="photo/menu/pizza/cheese-pizza.png" alt="" class="item-photo">
                         <h1 class="item-name">Four cheese</h1>
                         <h2 class="item-desc">Mozzarella, gorgonzola, Parmigiano Reggiano, and goat cheese</h2>
                         <p class="item-weight">500g</p>
@@ -109,7 +109,7 @@
                 </li>
                 <li class="category-item">
                     <div class="item">
-                        <img src="photo/menu/pizza/pizza with mozzarella.png" alt="" class="item-photo">
+                        <img src="photo/menu/pizza/pizza-with-mozzarella.png" alt="" class="item-photo">
                         <h1 class="item-name">Pizza with mozzarella</h1>
                         <h2 class="item-desc">Fresh tomatoes, mozzarella, spinach</h2>
                         <p class="item-weight">550g</p>
@@ -121,7 +121,7 @@
                 </li>
                 <li class="category-item">
                     <div class="item">
-                        <img src="photo/menu/pizza/vegetarian pizza.png" alt="" class="item-photo">
+                        <img src="photo/menu/pizza/vegetarian-pizza.png" alt="" class="item-photo">
                         <h1 class="item-name">Vegetarian pizza</h1>
                         <h2 class="item-desc">Fresh tomatoes, onions, corn, mozzarella, mushrooms</h2>
                         <p class="item-weight">450g</p>

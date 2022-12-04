@@ -85,7 +85,7 @@
                 </li>
                 <li class="category-item">
                     <div class="item">
-                        <img src="photo/menu/desserts/ferrero Rocher ice cream.png" alt="" class="item-photo">
+                        <img src="photo/menu/desserts/ferrero-Rocher-ice-cream.png" alt="" class="item-photo">
                         <h1 class="item-name">Ferrero Rocher ice cream</h1>
                         <h2 class="item-desc"></h2>
                         <p class="item-weight">250g</p>

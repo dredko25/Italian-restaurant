@@ -49,7 +49,7 @@
             <ul class="category-items">
                 <li class="category-item">
                     <div class="item">
-                        <img src="photo/menu/soup/chick pea soup.png" alt="" class="item-photo">
+                        <img src="photo/menu/soup/chickpea-soup.png" alt="" class="item-photo">
                         <h1 class="item-name">Chickpea soup</h1>
                         <h2 class="item-desc">Vegetable broth, vegetables, canned chickpeas, aromatics, parsley</h2>
                         <p class="item-weight">400g</p>
@@ -73,7 +73,7 @@
                 </li>
                 <li class="category-item">
                     <div class="item">
-                        <img src="photo/menu/soup/Italian Vegetable Soup.png" alt="" class="item-photo">
+                        <img src="photo/menu/soup/Italian-Vegetable-Soup.png" alt="" class="item-photo">
                         <h1 class="item-name">Vegetable soup</h1>
                         <h2 class="item-desc">Onion, carrots, celery, tomato puree, vegetable stock, courgettes, garlic</h2>
                         <p class="item-weight">350g</p>
@@ -109,7 +109,7 @@
                 </li>
                 <li class="category-item">
                     <div class="item">
-                        <img src="photo/menu/soup/Pappa al Pomodoro.png" alt="" class="item-photo">
+                        <img src="photo/menu/soup/Pappa-al-Pomodoro.png" alt="" class="item-photo">
                         <h1 class="item-name">Pappa al Pomodoro</h1>
                         <h2 class="item-desc">Tinned San Marzano tomatoes, onion, basil, vegetable stock</h2>
                         <p class="item-weight">300g</p>
@@ -121,7 +121,7 @@
                 </li>
                 <li class="category-item">
                     <div class="item">
-                        <img src="photo/menu/soup/Pasta e fragioli.png" alt="" class="item-photo">
+                        <img src="photo/menu/soup/Pasta-e-fragioli.png" alt="" class="item-photo">
                         <h1 class="item-name">Pasta  e Fagioli</h1>
                         <h2 class="item-desc">Pancetta, yellow onion, carrots, ribs celery, garlic, chicken broth, cannellini beans</h2>
                         <p class="item-weight">350g</p>
