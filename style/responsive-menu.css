@@ -59,8 +59,8 @@
         max-width: 1188px;
     }
 }
-@media (min-width: 1590px) and (max-width: 1800px) {
+@media (min-width: 1591px){
     .category-items {
-        max-width: 1550px;
+        width: 1500px;
     }
 }

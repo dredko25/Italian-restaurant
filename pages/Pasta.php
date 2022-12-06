@@ -7,28 +7,28 @@
     <title>Pasta</title>
     <link href="https://fonts.googleapis.com/css?family=Great+Vibes:regular&display=swap" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css?family=Saira+Condensed:300,regular&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="menu.css">
-    <link rel="stylesheet" href="responsive.css">
-    <link rel="stylesheet" href="responsive-menu.css">
+    <link rel="stylesheet" href="/style/style.css">
+    <link rel="stylesheet" href="/style/menu.css">
+    <link rel="stylesheet" href="/style/responsive.css">
+    <link rel="stylesheet" href="/style/responsive-menu.css">
 </head>
 <body>
     <div class="wrapper">
         <header class="header">
             <nav class="container header-menu">
-                <a href="index.php" class="header-logo">
-                    <img src="photo/restaurant-logo.png" alt="logo" class="photo-logo">
+                <a href="/index.php" class="header-logo">
+                    <img src="../photo/restaurant-logo.png" alt="logo" class="photo-logo">
                     <h1 class="name-restaurant">Bruschetta</h1>
                 </a>
                 <ul class="menu-list">
                 <li class="menu-item">
-                        <a href="index.php#home" class="menu-link">Home</a>
+                        <a href="/index.php#home" class="menu-link">Home</a>
                     </li>
                     <li class="menu-item">
-                        <a href="index.php#about" class="menu-link">About</a>
+                        <a href="/index.php#about" class="menu-link">About</a>
                     </li>
                     <li class="menu-item">
-                        <a href="index.php#menu" class="menu-link">Menu</a>
+                        <a href="/index.php#menu" class="menu-link">Menu</a>
                     </li>
                     <li class="menu-item">
                         <a href="" class="menu-link">Basket</a>
@@ -49,7 +49,7 @@
             <ul class="category-items">
                 <li class="category-item">
                     <div class="item">
-                        <img src="photo/menu/pasta/pasta1.png" alt="" class="item-photo">
+                        <img src="../photo/menu/pasta/pasta1.png" alt="" class="item-photo">
                         <h1 class="item-name">Pasta with sprouts</h1>
                         <h2 class="item-desc">Pasta, sprouts of wheat</h2>
                         <p class="item-weight">400g</p>
@@ -61,7 +61,7 @@
                 </li>
                 <li class="category-item">
                     <div class="item">
-                        <img src="photo/menu/pasta/pasta2.png" alt="" class="item-photo">
+                        <img src="../photo/menu/pasta/pasta2.png" alt="" class="item-photo">
                         <h1 class="item-name">Caprese pasta</h1>
                         <h2 class="item-desc">Pasta, mozzarella, tomatoes, garlic</h2>
                         <p class="item-weight">450g</p>
@@ -73,7 +73,7 @@
                 </li>
                 <li class="category-item">
                     <div class="item">
-                        <img src="photo/menu/pasta/pasta3.png" alt="" class="item-photo">
+                        <img src="../photo/menu/pasta/pasta3.png" alt="" class="item-photo">
                         <h1 class="item-name">Pasta Primavera</h1>
                         <h2 class="item-desc">Pasta, red onion, carrot, broccoli, bell pepper, yellow squash, zucchini, tomatoes and garlic</h2>
                         <p class="item-weight">450g</p>
@@ -85,7 +85,7 @@
                 </li>
                 <li class="category-item">
                     <div class="item">
-                        <img src="photo/menu/pasta/pasta4.png" alt="" class="item-photo">
+                        <img src="../photo/menu/pasta/pasta4.png" alt="" class="item-photo">
                         <h1 class="item-name">Pasta with meatballs</h1>
                         <h2 class="item-desc">Spaghetti, ground beef, Parmesan, garlic</h2>
                         <p class="item-weight">500g</p>
@@ -97,7 +97,7 @@
                 </li>
                 <li class="category-item">
                     <div class="item">
-                        <img src="photo/menu/pasta/pasta5.png" alt="" class="item-photo">
+                        <img src="../photo/menu/pasta/pasta5.png" alt="" class="item-photo">
                         <h1 class="item-name">Pasta fredda alla caprese</h1>
                         <h2 class="item-desc">Pasta, mozzarella, cherry tomatoes</h2>
                         <p class="item-weight">500g</p>
@@ -109,7 +109,7 @@
                 </li>
                 <li class="category-item">
                     <div class="item">
-                        <img src="photo/menu/pasta/pasta6.png" alt="" class="item-photo">
+                        <img src="../photo/menu/pasta/pasta6.png" alt="" class="item-photo">
                         <h1 class="item-name">Chili Pasta</h1>
                         <h2 class="item-desc">Pasta, chillies, garlic, Parmesan</h2>
                         <p class="item-weight">400g</p>
@@ -127,15 +127,15 @@
             <div class="footer-content">
                 <div class="social-media">
                     <a href="https://www.instagram.com/" target="_blank" class="inst">
-                        <img src="photo/instagram.png" alt="logo" class="media-logo">
+                        <img src="../photo/instagram.png" alt="logo" class="media-logo">
                     </a>
                     <a href="https://www.facebook.com/" target="_blank" class="facebook">
-                        <img src="photo/facebook.png" alt="logo" class="media-logo">
+                        <img src="../photo/facebook.png" alt="logo" class="media-logo">
                     </a>
                 </div>
                 <div class="footer-center">
-                    <a href="#home" class="footer-logo">
-                        <img src="photo/restaurant-logo.png" alt="logo" class="photo-logo">
+                    <a href="/index.php#home" class="footer-logo">
+                        <img src="../photo/restaurant-logo.png" alt="logo" class="photo-logo">
                         <h1 class="name-restaurant">Bruschetta</h1>
                     </a>
                     <div class="hours">

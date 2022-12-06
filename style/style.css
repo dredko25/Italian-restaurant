@@ -98,13 +98,13 @@ body {
     position: relative;
 }
 #photo1 {
-    background: url(photo/background1.png) no-repeat;
+    background: url(../photo/background1.png) no-repeat;
     background-size: 100%;
     background-size: cover;
     height: 100vh;
 }
 #photo2 {
-    background: url(photo/background1_1.png) no-repeat;
+    background: url(../photo/background1_1.png) no-repeat;
     background-size: 100%;
     background-size: cover;
     height: 100vh;
@@ -197,7 +197,7 @@ body {
     line-height: 1.2;
 }
 .header-our-menu {
-    background-image: url(photo/our-menu.png);
+    background-image: url(../photo/our-menu.png);
     background-size: 100%;
     height: 23vh;
     width: 100%;
@@ -241,22 +241,22 @@ body {
     background-size: 100%;
 }
 #Pasta {
-    background-image: url(photo/menu/pasta-main-cut.png);
+    background-image: url(../photo/menu/pasta-main-cut.png);
 }
 #Soup {
-    background-image: url(photo/menu/Soup-main-cut.png);
+    background-image: url(../photo/menu/Soup-main-cut.png);
 }
 #Bruschetta {
-    background-image: url(photo/menu/bruschetta-main-cut.png);
+    background-image: url(../photo/menu/bruschetta-main-cut.png);
 }
 #Pizza {
-    background-image: url(photo/menu/pizza-main-cut.png);
+    background-image: url(../photo/menu/pizza-main-cut.png);
 }
 #Desserts {
-    background-image: url(photo/menu/dessert-main-cut.png);
+    background-image: url(../photo/menu/dessert-main-cut.png);
 }
 #Specials {
-    background-image: url(photo/menu/specials-main-cut.png);
+    background-image: url(../photo/menu/specials-main-cut.png);
 }
 .footer {
     margin-top: 50px;

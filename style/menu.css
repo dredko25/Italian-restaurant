@@ -1,5 +1,5 @@
 .header {
-    background-image: url(/photo/background2_1.png);
+    background-image: url(../photo/background2_1.png);
     background-size: cover;
     position: absolute;
 }
