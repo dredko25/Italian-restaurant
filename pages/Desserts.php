@@ -37,7 +37,7 @@ require_once "../includes/db.php";
                             <p class="item-weight"><?php echo $dish['dish_weight']; ?>g</p>
                             <div class="button">
                                 <div class="item-price">$<?php echo $dish['dish_cost']; ?></div>
-                                <button class="buy">Add to Busket</button>
+                                <a class="buy">Add to Busket</a>
                             </div>
                         </div>
                     </li>
