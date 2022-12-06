@@ -81,7 +81,7 @@ require_once "includes/db.php";
                 <section class="menu-items">
                     <ul class="menu-items-list container">
                         <?php
-                        while ( ($categ = mysqli_fetch_assoc($categories)) ) {
+                        while ($categ = mysqli_fetch_assoc($categories)) {
                         ?>
                             <li id="<?= $categ['category_name']; ?>" class="menu-item-list">
                                 <a href="/pages/<?= $categ['category_name']; ?>.php" class="category-name"><?php echo $categ['category_name']; ?></a>

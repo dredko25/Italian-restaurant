@@ -27,7 +27,7 @@ require_once "../includes/db.php";
             <h1 class="category-name">Soup</h1>
             <ul class="category-items">
                 <?php
-                while (($dish = mysqli_fetch_assoc($dishes))) {
+                while ($dish = mysqli_fetch_assoc($dishes)) {
                 ?>
                     <li class="category-item">
                         <div class="item">
