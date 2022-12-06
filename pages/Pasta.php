@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -12,38 +13,10 @@
     <link rel="stylesheet" href="/style/responsive.css">
     <link rel="stylesheet" href="/style/responsive-menu.css">
 </head>
+
 <body>
     <div class="wrapper">
-        <header class="header">
-            <nav class="container header-menu">
-                <a href="/index.php" class="header-logo">
-                    <img src="../photo/restaurant-logo.png" alt="logo" class="photo-logo">
-                    <h1 class="name-restaurant">Bruschetta</h1>
-                </a>
-                <ul class="menu-list">
-                <li class="menu-item">
-                        <a href="/index.php#home" class="menu-link">Home</a>
-                    </li>
-                    <li class="menu-item">
-                        <a href="/index.php#about" class="menu-link">About</a>
-                    </li>
-                    <li class="menu-item">
-                        <a href="/index.php#menu" class="menu-link">Menu</a>
-                    </li>
-                    <li class="menu-item">
-                        <a href="" class="menu-link">Basket</a>
-                    </li>
-                    <li class="menu-item">
-                        <a href="#contacts" class="menu-link">Contacts</a>
-                    </li>
-                </ul>
-                <button class="burger">
-                    <span class="line"></span>
-                    <span class="line"></span>
-                    <span class="line"></span>
-                </button>
-            </nav>
-        </header>
+        <?php include "../includes/header-pages.php"; ?>
         <main class="main container-menu">
             <h1 class="category-name">Pasta</h1>
             <ul class="category-items">
@@ -122,38 +95,10 @@
             </ul>
 
         </main>
-        <footer class="footer">
-            <a id="contacts" class="in-page-link"></a>
-            <div class="footer-content">
-                <div class="social-media">
-                    <a href="https://www.instagram.com/" target="_blank" class="inst">
-                        <img src="../photo/instagram.png" alt="logo" class="media-logo">
-                    </a>
-                    <a href="https://www.facebook.com/" target="_blank" class="facebook">
-                        <img src="../photo/facebook.png" alt="logo" class="media-logo">
-                    </a>
-                </div>
-                <div class="footer-center">
-                    <a href="/index.php#home" class="footer-logo">
-                        <img src="../photo/restaurant-logo.png" alt="logo" class="photo-logo">
-                        <h1 class="name-restaurant">Bruschetta</h1>
-                    </a>
-                    <div class="hours">
-                        Working hours: 10:00 - 22:00
-                    </div>
-                    <div class="copyright">
-                        © COPYRIGHT 2014 - ALL RIGHTS RESERVED
-                    </div>
-                </div>
-                <div class="our-contacts">
-                    <h2 id="cont" class="contacts-item">Our contacts:</h2>
-                    <h2 class="contacts-item">+380972679534</h2>
-                    <h2 class="contacts-item">+380662679534</h2>
-                </div>
-            </div>
-        </footer>
+        <?php include "../includes/footer-pages.php"; ?>
     </div>
 
     <script src="/script.js"></script>
 </body>
+
 </html>
