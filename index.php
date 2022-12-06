@@ -1,8 +1,7 @@
 <?php
 require_once "includes/db.php";
-require_once "includes/func.php";
-// $categories = get_categories();
-// debug($categories)
+// require_once "includes/func.php";
+// get_categories()
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -71,6 +70,9 @@ require_once "includes/func.php";
                     <p class="description">Spaghetti Bolognese does not exist in Italy. There you have to order tagliatelle with Ragu sauce. In a pizzeria, never share the pizza with someone else – the Italians never share a pizza and will look at you very surprised. Cappuccino after 11 AM? It is not a good idea! For Italians, the cappuccino is an acceptable option for breakfast, but not for the later hours of the day. </p>
                 </section>
             </div>
+            <?php
+            $categories = mysqli_query($connection, "SELECT `category_name`FROM `Category`");
+            ?>
             <div class="section-menu">
                 <a id="menu" class="in-page-link"></a>
                 <section class="header-our-menu">
@@ -78,24 +80,15 @@ require_once "includes/func.php";
                 </section>
                 <section class="menu-items">
                     <ul class="menu-items-list container">
-                        <li id="Pasta" class="menu-item-list">
-                            <a href="/pages/Pasta.php" class="category-name">Pasta</a>
-                        </li>
-                        <li id="Soup" class="menu-item-list">
-                            <a href="/pages/Soup.php" class="category-name">Soup</a>
-                        </li>
-                        <li id="Bruschetta" class="menu-item-list">
-                            <a href="/pages/Bruschetta.php" class="category-name">Bruschetta</a>
-                        </li>
-                        <li id="Pizza" class="menu-item-list">
-                            <a href="/pages/Pizza.php" class="category-name">Pizza</a>
-                        </li>
-                        <li id="Desserts" class="menu-item-list">
-                            <a href="/pages/Desserts.php" class="category-name">Desserts</a>
-                        </li>
-                        <li id="Specials" class="menu-item-list">
-                            <a href="/pages/Specials.php" class="category-name">Specials</a>
-                        </li>
+                        <?php
+                        while ( ($categ = mysqli_fetch_assoc($categories)) ) {
+                        ?>
+                            <li id="<?= $categ['category_name']; ?>" class="menu-item-list">
+                                <a href="/pages/<?= $categ['category_name']; ?>.php" class="category-name"><?php echo $categ['category_name']; ?></a>
+                            </li>
+                        <?php
+                        }
+                        ?>
                     </ul>
                 </section>
             </div>

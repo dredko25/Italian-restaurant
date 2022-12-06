@@ -1,3 +1,6 @@
+<?php
+require_once "../includes/db.php";
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -17,81 +20,30 @@
 <body>
     <div class="wrapper">
         <?php include "../includes/header-pages.php"; ?>
+        <?php
+        $dishes = mysqli_query($connection, "SELECT `dish_name`, `dish_description`, `dish_cost`, `dish_weight`, `dish_img` FROM `Dish` WHERE `id_category` IN (SELECT `id_category` FROM `Category` WHERE `category_name` = 'Pasta')");
+        ?>
         <main class="main container-menu">
             <h1 class="category-name">Pasta</h1>
             <ul class="category-items">
-                <li class="category-item">
-                    <div class="item">
-                        <img src="../photo/menu/pasta/pasta1.png" alt="" class="item-photo">
-                        <h1 class="item-name">Pasta with sprouts</h1>
-                        <h2 class="item-desc">Pasta, sprouts of wheat</h2>
-                        <p class="item-weight">400g</p>
-                        <div class="button">
-                            <div class="item-price">$17</div>
-                            <button class="buy">Add to Busket</button>
+                <?php
+                while (($dish = mysqli_fetch_assoc($dishes))) {
+                ?>
+                    <li class="category-item">
+                        <div class="item">
+                            <img src="../photo/menu/pasta/<?= $dish['dish_img']; ?>" alt="" class="item-photo">
+                            <h1 class="item-name"><?php echo $dish['dish_name']; ?></h1>
+                            <h2 class="item-desc"><?php echo $dish['dish_description']; ?></h2>
+                            <p class="item-weight"><?php echo $dish['dish_weight']; ?>g</p>
+                            <div class="button">
+                                <div class="item-price">$<?php echo $dish['dish_cost']; ?></div>
+                                <button class="buy">Add to Busket</button>
+                            </div>
                         </div>
-                    </div>
-                </li>
-                <li class="category-item">
-                    <div class="item">
-                        <img src="../photo/menu/pasta/pasta2.png" alt="" class="item-photo">
-                        <h1 class="item-name">Caprese pasta</h1>
-                        <h2 class="item-desc">Pasta, mozzarella, tomatoes, garlic</h2>
-                        <p class="item-weight">450g</p>
-                        <div class="button">
-                            <div class="item-price">$20</div>
-                            <button class="buy">Add to Busket</button>
-                        </div>
-                    </div>
-                </li>
-                <li class="category-item">
-                    <div class="item">
-                        <img src="../photo/menu/pasta/pasta3.png" alt="" class="item-photo">
-                        <h1 class="item-name">Pasta Primavera</h1>
-                        <h2 class="item-desc">Pasta, red onion, carrot, broccoli, bell pepper, yellow squash, zucchini, tomatoes and garlic</h2>
-                        <p class="item-weight">450g</p>
-                        <div class="button">
-                            <div class="item-price">$20</div>
-                            <button class="buy">Add to Busket</button>
-                        </div>
-                    </div>
-                </li>
-                <li class="category-item">
-                    <div class="item">
-                        <img src="../photo/menu/pasta/pasta4.png" alt="" class="item-photo">
-                        <h1 class="item-name">Pasta with meatballs</h1>
-                        <h2 class="item-desc">Spaghetti, ground beef, Parmesan, garlic</h2>
-                        <p class="item-weight">500g</p>
-                        <div class="button">
-                            <div class="item-price">$25</div>
-                            <button class="buy">Add to Busket</button>
-                        </div>
-                    </div>
-                </li>
-                <li class="category-item">
-                    <div class="item">
-                        <img src="../photo/menu/pasta/pasta5.png" alt="" class="item-photo">
-                        <h1 class="item-name">Pasta fredda alla caprese</h1>
-                        <h2 class="item-desc">Pasta, mozzarella, cherry tomatoes</h2>
-                        <p class="item-weight">500g</p>
-                        <div class="button">
-                            <div class="item-price">$20</div>
-                            <button class="buy">Add to Busket</button>
-                        </div>
-                    </div>
-                </li>
-                <li class="category-item">
-                    <div class="item">
-                        <img src="../photo/menu/pasta/pasta6.png" alt="" class="item-photo">
-                        <h1 class="item-name">Chili Pasta</h1>
-                        <h2 class="item-desc">Pasta, chillies, garlic, Parmesan</h2>
-                        <p class="item-weight">400g</p>
-                        <div class="button">
-                            <div class="item-price">$20</div>
-                            <button class="buy">Add to Busket</button>
-                        </div>
-                    </div>
-                </li>
+                    </li>
+                <?php
+                }
+                ?>
             </ul>
 
         </main>

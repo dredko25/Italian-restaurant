@@ -1,11 +1,10 @@
 <?php
-    function debug(array $data) : void
-    {
-        echo '<pre>' . print_r($data, true) . '</pre>';
+function get_categories(): void
+{
+    global $connection;
+    $res = mysqli_query($connection, "SELECT * FROM `Category`");
+    while($cat = mysqli_fetch_assoc($res)){
+        echo '<pre>' . print_r ($cat, 1) . '</pre>';
     }
-    function get_categories() : array
-    {
-        global $connection;
-        $res = $connection -> query("SELECT * FROM `Category`");
-        return $res -> fetch_all();
-    }
+    echo "end";
+}

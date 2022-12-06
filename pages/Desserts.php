@@ -1,3 +1,6 @@
+<?php
+require_once "../includes/db.php";
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -17,81 +20,30 @@
 <body>
     <div class="wrapper">
         <?php include "../includes/header-pages.php"; ?>
+        <?php
+        $dishes = mysqli_query($connection, "SELECT `dish_name`, `dish_description`, `dish_cost`, `dish_weight`, `dish_img` FROM `Dish` WHERE `id_category` IN (SELECT `id_category` FROM `Category` WHERE `category_name` = 'Desserts')");
+        ?>
         <main class="main container-menu">
             <h1 class="category-name">Desserts</h1>
             <ul class="category-items">
-                <li class="category-item">
-                    <div class="item">
-                        <img src="../photo/menu/desserts/Beignets.png" alt="" class="item-photo">
-                        <h1 class="item-name">Beignets</h1>
-                        <h2 class="item-desc"></h2>
-                        <p class="item-weight">240g</p>
-                        <div class="button">
-                            <div class="item-price">$16</div>
-                            <button class="buy">Add to Busket</button>
+                <?php
+                while (($dish = mysqli_fetch_assoc($dishes))) {
+                ?>
+                    <li class="category-item">
+                        <div class="item">
+                            <img src="../photo/menu/desserts/<?= $dish['dish_img']; ?>" alt="" class="item-photo">
+                            <h1 class="item-name"><?php echo $dish['dish_name']; ?></h1>
+                            <h2 class="item-desc"><?php echo $dish['dish_description']; ?></h2>
+                            <p class="item-weight"><?php echo $dish['dish_weight']; ?>g</p>
+                            <div class="button">
+                                <div class="item-price">$<?php echo $dish['dish_cost']; ?></div>
+                                <button class="buy">Add to Busket</button>
+                            </div>
                         </div>
-                    </div>
-                </li>
-                <li class="category-item">
-                    <div class="item">
-                        <img src="../photo/menu/desserts/cannoli-crepes.png" alt="" class="item-photo">
-                        <h1 class="item-name">Cannoli crepes</h1>
-                        <h2 class="item-desc"></h2>
-                        <p class="item-weight">200g</p>
-                        <div class="button">
-                            <div class="item-price">$13</div>
-                            <button class="buy">Add to Busket</button>
-                        </div>
-                    </div>
-                </li>
-                <li class="category-item">
-                    <div class="item">
-                        <img src="../photo/menu/desserts/Cheesecake.png" alt="" class="item-photo">
-                        <h1 class="item-name">Cheesecake</h1>
-                        <h2 class="item-desc"></h2>
-                        <p class="item-weight">200g</p>
-                        <div class="button">
-                            <div class="item-price">$13</div>
-                            <button class="buy">Add to Busket</button>
-                        </div>
-                    </div>
-                </li>
-                <li class="category-item">
-                    <div class="item">
-                        <img src="../photo/menu/desserts/ferrero-Rocher-ice-cream.png" alt="" class="item-photo">
-                        <h1 class="item-name">Ferrero Rocher ice cream</h1>
-                        <h2 class="item-desc"></h2>
-                        <p class="item-weight">250g</p>
-                        <div class="button">
-                            <div class="item-price">$20</div>
-                            <button class="buy">Add to Busket</button>
-                        </div>
-                    </div>
-                </li>
-                <li class="category-item">
-                    <div class="item">
-                        <img src="../photo/menu/desserts/Sfogliatella.png" alt="" class="item-photo">
-                        <h1 class="item-name">Sfogliatella</h1>
-                        <h2 class="item-desc"></h2>
-                        <p class="item-weight">200g</p>
-                        <div class="button">
-                            <div class="item-price">$15</div>
-                            <button class="buy">Add to Busket</button>
-                        </div>
-                    </div>
-                </li>
-                <li class="category-item">
-                    <div class="item">
-                        <img src="../photo/menu/desserts/tiramisu.png" alt="" class="item-photo">
-                        <h1 class="item-name">Tiramisu</h1>
-                        <h2 class="item-desc"></h2>
-                        <p class="item-weight">200g</p>
-                        <div class="button">
-                            <div class="item-price">$15</div>
-                            <button class="buy">Add to Busket</button>
-                        </div>
-                    </div>
-                </li>
+                    </li>
+                <?php
+                }
+                ?>
             </ul>
 
         </main>

@@ -1,3 +1,6 @@
+<?php
+require_once "../includes/db.php";
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -17,93 +20,30 @@
 <body>
     <div class="wrapper">
         <?php include "../includes/header-pages.php"; ?>
+        <?php
+        $dishes = mysqli_query($connection, "SELECT `dish_name`, `dish_description`, `dish_cost`, `dish_weight`, `dish_img` FROM `Dish` WHERE `id_category` IN (SELECT `id_category` FROM `Category` WHERE `category_name` = 'Pizza')");
+        ?>
         <main class="main container-menu">
             <h1 class="category-name">Pizza</h1>
             <ul class="category-items">
-                <li class="category-item">
-                    <div class="item">
-                        <img src="../photo/menu/pizza/basil-food-garlic-sauce-italian-pizza.png" alt="" class="item-photo">
-                        <h1 class="item-name">Garlic pizza</h1>
-                        <h2 class="item-desc">Tomato sauce, garlic, basil</h2>
-                        <p class="item-weight">400g</p>
-                        <div class="button">
-                            <div class="item-price">$14</div>
-                            <button class="buy">Add to Busket</button>
+                <?php
+                while (($dish = mysqli_fetch_assoc($dishes))) {
+                ?>
+                    <li class="category-item">
+                        <div class="item">
+                            <img src="../photo/menu/pizza/<?= $dish['dish_img']; ?>" alt="" class="item-photo">
+                            <h1 class="item-name"><?php echo $dish['dish_name']; ?></h1>
+                            <h2 class="item-desc"><?php echo $dish['dish_description']; ?></h2>
+                            <p class="item-weight"><?php echo $dish['dish_weight']; ?>g</p>
+                            <div class="button">
+                                <div class="item-price">$<?php echo $dish['dish_cost']; ?></div>
+                                <button class="buy">Add to Busket</button>
+                            </div>
                         </div>
-                    </div>
-                </li>
-                <li class="category-item">
-                    <div class="item">
-                        <img src="../photo/menu/pizza/cheese-pizza.png" alt="" class="item-photo">
-                        <h1 class="item-name">Four cheese</h1>
-                        <h2 class="item-desc">Mozzarella, gorgonzola, Parmigiano Reggiano, and goat cheese</h2>
-                        <p class="item-weight">500g</p>
-                        <div class="button">
-                            <div class="item-price">$24</div>
-                            <button class="buy">Add to Busket</button>
-                        </div>
-                    </div>
-                </li>
-                <li class="category-item">
-                    <div class="item">
-                        <img src="../photo/menu/pizza/hot-and-spicy-pizza.png" alt="" class="item-photo">
-                        <h1 class="item-name">Hot and spicy pizza</h1>
-                        <h2 class="item-desc">Fresh tomatoes, onions, corn, mozzarella, mushrooms</h2>
-                        <p class="item-weight">400g</p>
-                        <div class="button">
-                            <div class="item-price">$17</div>
-                            <button class="buy">Add to Busket</button>
-                        </div>
-                    </div>
-                </li>
-                <li class="category-item">
-                    <div class="item">
-                        <img src="../photo/menu/pizza/meat-feast-mixed-pizza.png" alt="" class="item-photo">
-                        <h1 class="item-name">Meat pizza</h1>
-                        <h2 class="item-desc">Fresh tomatoes, onions, mozzarella, bacon, pickles, olives</h2>
-                        <p class="item-weight">500g</p>
-                        <div class="button">
-                            <div class="item-price">$19</div>
-                            <button class="buy">Add to Busket</button>
-                        </div>
-                    </div>
-                </li>
-                <li class="category-item">
-                    <div class="item">
-                        <img src="../photo/menu/pizza/Pepperoni-Pizza.png" alt="" class="item-photo">
-                        <h1 class="item-name">Pepperoni</h1>
-                        <h2 class="item-desc">Fresh tomatoes, mozzarella</h2>
-                        <p class="item-weight">500g</p>
-                        <div class="button">
-                            <div class="item-price">$13</div>
-                            <button class="buy">Add to Busket</button>
-                        </div>
-                    </div>
-                </li>
-                <li class="category-item">
-                    <div class="item">
-                        <img src="../photo/menu/pizza/pizza-with-mozzarella.png" alt="" class="item-photo">
-                        <h1 class="item-name">Pizza with mozzarella</h1>
-                        <h2 class="item-desc">Fresh tomatoes, mozzarella, spinach</h2>
-                        <p class="item-weight">550g</p>
-                        <div class="button">
-                            <div class="item-price">$15</div>
-                            <button class="buy">Add to Busket</button>
-                        </div>
-                    </div>
-                </li>
-                <li class="category-item">
-                    <div class="item">
-                        <img src="../photo/menu/pizza/vegetarian-pizza.png" alt="" class="item-photo">
-                        <h1 class="item-name">Vegetarian pizza</h1>
-                        <h2 class="item-desc">Fresh tomatoes, onions, corn, mozzarella, mushrooms</h2>
-                        <p class="item-weight">450g</p>
-                        <div class="button">
-                            <div class="item-price">$13</div>
-                            <button class="buy">Add to Busket</button>
-                        </div>
-                    </div>
-                </li>
+                    </li>
+                <?php
+                }
+                ?>
             </ul>
 
         </main>

@@ -1,3 +1,6 @@
+<?php
+require_once "../includes/db.php";
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -17,93 +20,30 @@
 <body>
     <div class="wrapper">
         <?php include "../includes/header-pages.php"; ?>
+        <?php
+        $dishes = mysqli_query($connection, "SELECT `dish_name`, `dish_description`, `dish_cost`, `dish_weight`, `dish_img` FROM `Dish` WHERE `id_category` IN (SELECT `id_category` FROM `Category` WHERE `category_name` = 'Soup')");
+        ?>
         <main class="main container-menu">
             <h1 class="category-name">Soup</h1>
             <ul class="category-items">
-                <li class="category-item">
-                    <div class="item">
-                        <img src="../photo/menu/soup/chickpea-soup.png" alt="" class="item-photo">
-                        <h1 class="item-name">Chickpea soup</h1>
-                        <h2 class="item-desc">Vegetable broth, vegetables, canned chickpeas, aromatics, parsley</h2>
-                        <p class="item-weight">400g</p>
-                        <div class="button">
-                            <div class="item-price">$17</div>
-                            <button class="buy">Add to Busket</button>
+                <?php
+                while (($dish = mysqli_fetch_assoc($dishes))) {
+                ?>
+                    <li class="category-item">
+                        <div class="item">
+                            <img src="../photo/menu/soup/<?= $dish['dish_img']; ?>" alt="" class="item-photo">
+                            <h1 class="item-name"><?php echo $dish['dish_name']; ?></h1>
+                            <h2 class="item-desc"><?php echo $dish['dish_description']; ?></h2>
+                            <p class="item-weight"><?php echo $dish['dish_weight']; ?>g</p>
+                            <div class="button">
+                                <div class="item-price">$<?php echo $dish['dish_cost']; ?></div>
+                                <button class="buy">Add to Busket</button>
+                            </div>
                         </div>
-                    </div>
-                </li>
-                <li class="category-item">
-                    <div class="item">
-                        <img src="../photo/menu/soup/Chicken-Gnocchi-Soup.png" alt="" class="item-photo">
-                        <h1 class="item-name">Chicken Gnocchi Soup</h1>
-                        <h2 class="item-desc">Chicken breasts, celery, onion, garlic, carrots, potato gnocchi</h2>
-                        <p class="item-weight">350g</p>
-                        <div class="button">
-                            <div class="item-price">$20</div>
-                            <button class="buy">Add to Busket</button>
-                        </div>
-                    </div>
-                </li>
-                <li class="category-item">
-                    <div class="item">
-                        <img src="../photo/menu/soup/Italian-Vegetable-Soup.png" alt="" class="item-photo">
-                        <h1 class="item-name">Vegetable soup</h1>
-                        <h2 class="item-desc">Onion, carrots, celery, tomato puree, vegetable stock, courgettes, garlic</h2>
-                        <p class="item-weight">350g</p>
-                        <div class="button">
-                            <div class="item-price">$15</div>
-                            <button class="buy">Add to Busket</button>
-                        </div>
-                    </div>
-                </li>
-                <li class="category-item">
-                    <div class="item">
-                        <img src="../photo/menu/soup/Italian-Wedding-Soup.png" alt="" class="item-photo">
-                        <h1 class="item-name">Italian wedding soup</h1>
-                        <h2 class="item-desc">Tomato broth with delicious seasonings</h2>
-                        <p class="item-weight">300g</p>
-                        <div class="button">
-                            <div class="item-price">$20</div>
-                            <button class="buy">Add to Busket</button>
-                        </div>
-                    </div>
-                </li>
-                <li class="category-item">
-                    <div class="item">
-                        <img src="../photo/menu/soup/Minestrone.png" alt="" class="item-photo">
-                        <h1 class="item-name">Minestrone</h1>
-                        <h2 class="item-desc">Beans, onions, celery, carrots, stock, and tomatoes</h2>
-                        <p class="item-weight">300g</p>
-                        <div class="button">
-                            <div class="item-price">$17</div>
-                            <button class="buy">Add to Busket</button>
-                        </div>
-                    </div>
-                </li>
-                <li class="category-item">
-                    <div class="item">
-                        <img src="../photo/menu/soup/Pappa-al-Pomodoro.png" alt="" class="item-photo">
-                        <h1 class="item-name">Pappa al Pomodoro</h1>
-                        <h2 class="item-desc">Tinned San Marzano tomatoes, onion, basil, vegetable stock</h2>
-                        <p class="item-weight">300g</p>
-                        <div class="button">
-                            <div class="item-price">$15</div>
-                            <button class="buy">Add to Busket</button>
-                        </div>
-                    </div>
-                </li>
-                <li class="category-item">
-                    <div class="item">
-                        <img src="../photo/menu/soup/Pasta-e-fragioli.png" alt="" class="item-photo">
-                        <h1 class="item-name">Pasta e Fagioli</h1>
-                        <h2 class="item-desc">Pancetta, yellow onion, carrots, ribs celery, garlic, chicken broth, cannellini beans</h2>
-                        <p class="item-weight">350g</p>
-                        <div class="button">
-                            <div class="item-price">$20</div>
-                            <button class="buy">Add to Busket</button>
-                        </div>
-                    </div>
-                </li>
+                    </li>
+                <?php
+                }
+                ?>
             </ul>
         </main>
         <?php include "../includes/footer-pages.php"; ?>
