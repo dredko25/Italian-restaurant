@@ -15,6 +15,8 @@ require_once "../includes/db.php";
     <link rel="stylesheet" href="/style/menu.css">
     <link rel="stylesheet" href="/style/responsive.css">
     <link rel="stylesheet" href="/style/responsive-menu.css">
+
+    <link rel="icon" type="image/png" sizes="32x32" href="../photo/favicon.png">
 </head>
 
 <body>

@@ -15,6 +15,8 @@ require_once "includes/db.php";
     <link href="https://fonts.googleapis.com/css?family=Saira+Condensed:300,regular&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="style/style.css">
     <link rel="stylesheet" href="style/responsive.css">
+
+    <link rel="icon" type="image/png" sizes="32x32" href="photo/favicon.png">
 </head>
 
 <body>
