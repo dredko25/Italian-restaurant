@@ -71,22 +71,22 @@
                 <section class="menu-items">
                     <ul class="menu-items-list container">
                         <li id="Pasta" class="menu-item-list">
-                            <a href="Pasta.php" class="category-name">Pasta</a>
+                            <a href="/pages/Pasta.php" class="category-name">Pasta</a>
                         </li>
                         <li id="Soup" class="menu-item-list">
-                            <a href="Soup.php" class="category-name">Soup</a>
+                            <a href="/pages/Soup.php" class="category-name">Soup</a>
                         </li>
                         <li id="Bruschetta" class="menu-item-list">
-                            <a href="Bruschetta.php" class="category-name">Bruschetta</a>
+                            <a href="/pages/Bruschetta.php" class="category-name">Bruschetta</a>
                         </li>
                         <li id="Pizza" class="menu-item-list">
-                            <a href="Pizza.php" class="category-name">Pizza</a>
+                            <a href="/pages/Pizza.php" class="category-name">Pizza</a>
                         </li>
                         <li id="Desserts" class="menu-item-list">
-                            <a href="Desserts.php" class="category-name">Desserts</a>
+                            <a href="/pages/Desserts.php" class="category-name">Desserts</a>
                         </li>
                         <li id="Specials" class="menu-item-list">
-                            <a href="Specials.php" class="category-name">Specials</a>
+                            <a href="/pages/Specials.php" class="category-name">Specials</a>
                         </li>
                     </ul>
                 </section>
