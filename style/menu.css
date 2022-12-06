@@ -97,6 +97,9 @@
 .buy {
     font-size: 24px;
     width: 148px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .category-item {
