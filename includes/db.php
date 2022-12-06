@@ -10,3 +10,7 @@
         die("Connection failed: " . mysqli_connect_error());
     }
     echo "Connected successfully";
+<<<<<<< HEAD
+=======
+?>
+>>>>>>> 98df877841d1279408a79490c1d4087b3a40bf13
