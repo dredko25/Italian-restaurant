@@ -1,35 +1,53 @@
-*, *::before, *::after {
+*,
+*::before,
+*::after {
     padding: 0;
     margin: 0;
     border: 0;
     box-sizing: border-box;
 }
+
 a {
     text-decoration: none;
     color: white;
 }
-ul, ol, li {
+
+ul,
+ol,
+li {
     list-style: none;
 }
+
 img {
     vertical-align: top;
 }
-h1, h2, h3, h4, h5, h6 {
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     font-weight: inherit;
     font-size: inherit;
 }
-html, body {
+
+html,
+body {
     height: 100%;
 }
+
 body {
     line-height: 1;
     color: white;
 }
-.wrapper{
+
+.wrapper {
     min-height: 100%;
     display: flex;
     flex-direction: column;
 }
+
 .container {
     max-width: 1600px;
     margin: 0 auto;
@@ -37,6 +55,7 @@ body {
     color: inherit;
     font-family: 'Saira Condensed';
 }
+
 .header {
     width: 100%;
     position: fixed;
@@ -44,21 +63,25 @@ body {
     z-index: 1000;
     background-color: rgba(0, 0, 0, 0.5);
 }
+
 .header-logo {
     display: flex;
     flex-direction: column;
     align-items: center;
     font-weight: 400;
 }
+
 .photo-logo {
     width: 70px;
     height: 70px;
 }
+
 .name-restaurant {
     font-size: 26px;
 }
+
 .header-menu {
-    
+
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -66,14 +89,17 @@ body {
     min-height: 126px;
     width: 80%;
 }
+
 .menu-list {
     display: flex;
     gap: 44px;
 }
+
 .menu-link {
     font-size: 32px;
     font-weight: 300;
 }
+
 .menu-link:hover {
     text-decoration: underline;
 }
@@ -85,6 +111,7 @@ body {
     border: none;
     outline: none;
 }
+
 .line {
     display: block;
     width: 25px;
@@ -97,30 +124,42 @@ body {
 .slider {
     position: relative;
 }
+
 #photo1 {
     background: url(../photo/background1.png) no-repeat;
     background-size: 100%;
     background-size: cover;
     height: 100vh;
 }
+
 #photo2 {
     background: url(../photo/background1_1.png) no-repeat;
     background-size: 100%;
     background-size: cover;
     height: 100vh;
 }
+
 .slide {
     display: none;
 }
+
 .fade {
     animation-name: fade;
     animation-duration: 1.5s;
-} 
-@keyframes fade {
-    from {opacity: .4}
-    to {opacity: 1}
 }
-.prev, .next {
+
+@keyframes fade {
+    from {
+        opacity: .4
+    }
+
+    to {
+        opacity: 1
+    }
+}
+
+.prev,
+.next {
     cursor: pointer;
     position: absolute;
     top: 50%;
@@ -134,13 +173,17 @@ body {
     user-select: none;
     z-index: 3;
 }
+
 .next {
     right: 0;
     border-radius: 5px 0 0 5px;
 }
-.prev:hover, .next:hover {
-    background-color: rgba(0,0,0,0.5);
+
+.prev:hover,
+.next:hover {
+    background-color: rgba(0, 0, 0, 0.5);
 }
+
 .main-block {
     position: absolute;
     display: flex;
@@ -155,23 +198,28 @@ body {
     text-align: center;
     top: 0;
 }
+
 .main-slogan {
     font-family: 'Great Vibes';
     font-size: 13.5vh;
     font-weight: 400;
 }
+
 .second-phrase {
     font-weight: 400;
     font-size: 4.4vh;
 }
-.desc{
+
+.desc {
     height: 100vh;
     display: flex;
 }
+
 .desc-photo {
     width: 45%;
     object-fit: cover;
 }
+
 .second-block {
     color: black;
     display: flex;
@@ -181,27 +229,32 @@ body {
     margin-left: 50px;
     margin-right: 30px;
 }
+
 .title {
     font-weight: 400;
     font-size: 5vh;
     padding: 10px 0px;
 }
+
 .subtitle {
     font-weight: 400;
     font-size: 3.4vh;
     line-height: 3;
 }
+
 .description {
     font-weight: 300;
     font-size: 2.5vh;
     line-height: 1.2;
 }
+
 .header-our-menu {
     background-image: url(../photo/our-menu.png);
     background-size: 100%;
     height: 23vh;
     width: 100%;
 }
+
 .our-menu {
     font-family: 'Great Vibes';
     font-style: normal;
@@ -212,6 +265,7 @@ body {
     justify-content: center;
     align-items: center;
 }
+
 .menu-items-list {
     display: flex;
     flex-direction: row;
@@ -219,6 +273,7 @@ body {
     align-content: space-between;
     justify-content: space-around;
 }
+
 .menu-item-list {
     width: 478px;
     height: 200px;
@@ -226,6 +281,7 @@ body {
     height: 21vh; */
     margin: 50px 7px 0px 7px;
 }
+
 .category-name {
     font-family: 'Great Vibes';
     font-style: normal;
@@ -237,27 +293,40 @@ body {
     width: 100%;
     height: 100%;
 }
-#Pasta, #Soup, #Bruschetta, #Pizza, #Desserts, #Specials {
+
+#Pasta,
+#Soup,
+#Bruschetta,
+#Pizza,
+#Desserts,
+#Specials {
     background-size: 100%;
 }
+
 #Pasta {
     background-image: url(../photo/menu/pasta-main-cut.png);
 }
+
 #Soup {
     background-image: url(../photo/menu/Soup-main-cut.png);
 }
+
 #Bruschetta {
     background-image: url(../photo/menu/bruschetta-main-cut.png);
 }
+
 #Pizza {
     background-image: url(../photo/menu/pizza-main-cut.png);
 }
+
 #Desserts {
     background-image: url(../photo/menu/dessert-main-cut.png);
 }
+
 #Specials {
     background-image: url(../photo/menu/specials-main-cut.png);
 }
+
 .footer {
     margin-top: 50px;
     background-color: #405B6E;
@@ -265,6 +334,7 @@ body {
     height: 24vh;
     width: 100%;
 }
+
 .footer-content {
     height: 24vh;
     width: 100%;
@@ -273,6 +343,7 @@ body {
     align-items: center;
     justify-content: space-around;
 }
+
 .footer-center {
     display: flex;
     align-items: center;
@@ -280,6 +351,7 @@ body {
     height: 100%;
     justify-content: space-around;
 }
+
 .footer-logo {
     display: flex;
     flex-direction: row;
@@ -289,32 +361,40 @@ body {
     font-family: 'Saira Condensed';
     gap: 20px;
 }
+
 .social-media {
     display: inline-flex;
     gap: 30px;
 }
+
 .media-logo {
     height: 50px;
     width: 50px;
 }
-.hours, .contacts-item {
+
+.hours,
+.contacts-item {
     font-family: 'Saira Condensed';
     font-style: normal;
     font-weight: 300;
     font-size: 24px;
 }
+
 .hours {
     font-size: 28px;
 }
+
 #cont {
     text-decoration: underline;
 }
+
 .our-contacts {
     display: flex;
     flex-direction: column;
     align-items: center;
     line-height: 1.5;
 }
+
 .copyright {
     font-family: 'Saira Condensed';
     font-style: normal;
