@@ -1,7 +1,8 @@
 <?php
+session_start();
 require_once "includes/db.php";
-// require_once "includes/func.php";
-// get_categories()
+require_once "includes/func.php";
+$products = get_products();
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -72,9 +73,6 @@ require_once "includes/db.php";
                     <p class="description">Spaghetti Bolognese does not exist in Italy. There you have to order tagliatelle with Ragu sauce. In a pizzeria, never share the pizza with someone else – the Italians never share a pizza and will look at you very surprised. Cappuccino after 11 AM? It is not a good idea! For Italians, the cappuccino is an acceptable option for breakfast, but not for the later hours of the day. </p>
                 </section>
             </div>
-            <?php
-            $categories = mysqli_query($connection, "SELECT `category_name`FROM `Category`");
-            ?>
             <div class="section-menu">
                 <a id="menu" class="in-page-link"></a>
                 <section class="header-our-menu">
@@ -82,15 +80,11 @@ require_once "includes/db.php";
                 </section>
                 <section class="menu-items">
                     <ul class="menu-items-list container">
-                        <?php
-                        while ($categ = mysqli_fetch_assoc($categories)) {
-                        ?>
+                        <?php foreach ($products as $categ): ?>
                             <li id="<?= $categ['category_name']; ?>" class="menu-item-list">
                                 <a href="/pages/<?= $categ['category_name']; ?>.php" class="category-name"><?php echo $categ['category_name']; ?></a>
                             </li>
-                        <?php
-                        }
-                        ?>
+                        <?php endforeach; ?>
                     </ul>
                 </section>
             </div>

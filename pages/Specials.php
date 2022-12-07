@@ -1,5 +1,8 @@
 <?php
+session_start();
 require_once "../includes/db.php";
+require_once "../includes/func.php";
+$products = get_dish('Specials');
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -22,15 +25,10 @@ require_once "../includes/db.php";
 <body>
     <div class="wrapper">
         <?php include "../includes/header-pages.php"; ?>
-        <?php
-        $dishes = mysqli_query($connection, "SELECT * FROM `Dish` WHERE `id_category` IN (SELECT `id_category` FROM `Category` WHERE `category_name` = 'Specials')");
-        ?>
         <main class="main container-menu">
             <h1 class="category-name">Specials</h1>
             <ul class="category-items">
-            <?php
-                while ($dish = mysqli_fetch_assoc($dishes)) {
-                ?>
+                <?php foreach ($products as $dish) : ?>
                     <li class="category-item">
                         <div class="item">
                             <img src="../photo/menu/specials/<?= $dish['dish_img']; ?>" alt="" class="item-photo">
@@ -39,18 +37,18 @@ require_once "../includes/db.php";
                             <p class="item-weight"><?php echo $dish['dish_weight']; ?>g</p>
                             <div class="button">
                                 <div class="item-price">$<?php echo $dish['dish_cost']; ?></div>
-                                <a class="buy add-to-busket" data-id="<?= $dish['id_dish'] ?>">Add to Busket</a>
+                                <a href="?busket=add&id=<?= $dish['id_dish'] ?>" class="buy add-to-busket" data-id="<?= $dish['id_dish'] ?>">Add to Busket</a>
                             </div>
                         </div>
                     </li>
-                <?php
-                }
-                ?>
+                <?php endforeach; ?>
             </ul>
         </main>
         <?php include "../includes/footer-pages.php"; ?>
     </div>
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
     <script src="/script/burger.js"></script>
+    <script src="/script/main.js"></script>
 </body>
 
 </html>

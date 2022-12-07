@@ -1,11 +1,15 @@
 <?php
+
 $host = 'localhost';
 $db = 'Italian_restaurant';
 $user = 'root';
 $pass = ')8v0OlKjf/SvN]3*';
 $charset = 'utf8';
 
-$connection = mysqli_connect($host, $user, $pass, $db);
-if (!$connection) {
-    die("Connection failed: " . mysqli_connect_error());
-}
+$dsn = "mysql:host=$host;dbname=$db;charset=$charset";
+$opt = [
+    PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
+    PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC,
+];
+
+$pdo = new PDO($dsn, $user, $pass, $opt);
