@@ -100,6 +100,11 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    cursor: pointer;
+}
+
+.buy:hover {
+    background-color: rgb(199, 199, 199);
 }
 
 .category-item {

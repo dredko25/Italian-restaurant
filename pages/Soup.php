@@ -23,7 +23,7 @@ require_once "../includes/db.php";
     <div class="wrapper">
         <?php include "../includes/header-pages.php"; ?>
         <?php
-        $dishes = mysqli_query($connection, "SELECT `dish_name`, `dish_description`, `dish_cost`, `dish_weight`, `dish_img` FROM `Dish` WHERE `id_category` IN (SELECT `id_category` FROM `Category` WHERE `category_name` = 'Soup')");
+        $dishes = mysqli_query($connection, "SELECT * FROM `Dish` WHERE `id_category` IN (SELECT `id_category` FROM `Category` WHERE `category_name` = 'Soup')");
         ?>
         <main class="main container-menu">
             <h1 class="category-name">Soup</h1>
@@ -39,7 +39,7 @@ require_once "../includes/db.php";
                             <p class="item-weight"><?php echo $dish['dish_weight']; ?>g</p>
                             <div class="button">
                                 <div class="item-price">$<?php echo $dish['dish_cost']; ?></div>
-                                <a class="buy">Add to Busket</a>
+                                <a class="buy add-to-busket" data-id="<?= $dish['id_dish'] ?>">Add to Busket</a>
                             </div>
                         </div>
                     </li>
@@ -50,7 +50,7 @@ require_once "../includes/db.php";
         </main>
         <?php include "../includes/footer-pages.php"; ?>
     </div>
-    <script src="/script.js"></script>
+    <script src="/script/burger.js"></script>
 </body>
 
 </html>

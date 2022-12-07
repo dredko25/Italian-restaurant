@@ -97,7 +97,10 @@ require_once "includes/db.php";
         </main>
         <?php include "includes/footer-main.php"; ?>
     </div>
-    <script src="script.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+    <script src="script/burger.js"></script>
+    <script src="script/slider.js"></script>
+    <script src="script/main.js"></script>
 </body>
 
 </html>
