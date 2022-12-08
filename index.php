@@ -3,6 +3,7 @@ session_start();
 require_once "includes/db.php";
 require_once "includes/func.php";
 $products = get_products();
+$check = header_choice('main');
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -23,36 +24,7 @@ $products = get_products();
 <body>
     <div class="wrapper">
         <a id="home" class="in-page-link"></a>
-        <header class="header">
-            <nav class="container header-menu">
-                <a href="#home" class="header-logo">
-                    <img src="photo/restaurant-logo.png" alt="logo" class="photo-logo">
-                    <h1 class="name-restaurant">Bruschetta</h1>
-                </a>
-                <ul class="menu-list">
-                    <li class="menu-item">
-                        <a href="#home" class="menu-link">Home</a>
-                    </li>
-                    <li class="menu-item">
-                        <a href="#about" class="menu-link">About</a>
-                    </li>
-                    <li class="menu-item">
-                        <a href="#menu" class="menu-link">Menu</a>
-                    </li>
-                    <li class="menu-item">
-                        <a href="" class="menu-link">Basket</a>
-                    </li>
-                    <li class="menu-item">
-                        <a href="#contacts" class="menu-link">Contacts</a>
-                    </li>
-                </ul>
-                <button class="burger">
-                    <span class="line"></span>
-                    <span class="line"></span>
-                    <span class="line"></span>
-                </button>
-            </nav>
-        </header>
+        <?php include "includes/header-pages.php"; ?>
         <main class="page">
             <div class="slider">
                 <div id="photo1" class="slide fade"></div>

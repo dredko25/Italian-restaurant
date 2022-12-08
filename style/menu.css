@@ -1,3 +1,6 @@
+body {
+    color: #000;
+}
 .header {
     background-image: url(../photo/background2_1.png);
     background-size: cover;

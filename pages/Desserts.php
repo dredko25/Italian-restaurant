@@ -3,6 +3,7 @@ session_start();
 require_once "../includes/db.php";
 require_once "../includes/func.php";
 $products = get_dish('Desserts');
+$check = header_choice('page');
 ?>
 <!DOCTYPE html>
 <html lang="en">

@@ -3,6 +3,7 @@ session_start();
 require_once "../includes/db.php";
 require_once "../includes/func.php";
 $products = get_dish('Bruschetta');
+$check = header_choice('page');
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -25,6 +26,8 @@ $products = get_dish('Bruschetta');
 <body>
     <div class="wrapper">
         <?php include "../includes/header-pages.php"; ?>
+        <?php //debug($_SESSION); 
+        //session_destroy(); ?>
         <main class="main container-menu">
             <h1 class="category-name">Bruschetta</h1>
             <ul class="category-items">
