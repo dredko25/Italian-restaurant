@@ -104,10 +104,6 @@ body {
     text-decoration: underline;
 }
 
-.item-qty {
-    /* padding-left: 5px; */
-}
-
 .burger {
     display: none;
     cursor: pointer;

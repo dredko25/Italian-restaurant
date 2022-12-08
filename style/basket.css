@@ -55,11 +55,16 @@
     align-items: center;
 }
 
-.total-sum{
+.total-sum {
     text-align: center;
     font-size: 36px;
     font-weight: bold;
 }
+
+.total-qty {
+    /* display: none; */
+}
+
 .make-an-order,
 .clear-the-basket {
     height: 80px;

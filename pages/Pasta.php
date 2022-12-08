@@ -32,7 +32,7 @@ $check = header_choice('page');
                 <?php foreach ($products as $dish) : ?>
                     <li class="category-item">
                         <div class="item">
-                            <img src="../photo/menu/pasta/<?= $dish['dish_img']; ?>" alt="" class="item-photo">
+                            <img src="../photo/menu/<?= $dish['dish_img']; ?>" alt="<?= $dish['dish_name']; ?>" class="item-photo">
                             <h1 class="item-name"><?php echo $dish['dish_name']; ?></h1>
                             <h2 class="item-desc"><?php echo $dish['dish_description']; ?></h2>
                             <p class="item-weight"><?php echo $dish['dish_weight']; ?>g</p>

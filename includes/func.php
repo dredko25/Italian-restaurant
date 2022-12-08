@@ -46,14 +46,14 @@ function get_product(int $id): array
 function add_to_basket($product): void
 {
     if (isset($_SESSION['basket'][$product['id_dish']])) { // якщо тавар вже є в кошику додаємо до кількості 1
-        $_SESSION['basket'][$product['id_dish']]['qty'] += 1;
+        $_SESSION['basket'][$product['id_dish']]['dish_qty'] += 1;
     } 
     else { // якщо немає, то створюємо цей товар
         $_SESSION['basket'][$product['id_dish']] = [
             'dish_name' => $product['dish_name'],
             'dish_weight' => $product['dish_weight'],
             'dish_cost' => $product['dish_cost'],
-            'qty' => 1,
+            'dish_qty' => 1,
             'dish_img' => $product['dish_img'],
         ];
     }

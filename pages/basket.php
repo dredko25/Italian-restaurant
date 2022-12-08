@@ -36,40 +36,21 @@ $check = header_choice('page');
                     <th class="th-header">Cost</th>
                     <th class="th-header">Del</th>
                 </tr>
+                <?php foreach ($_SESSION['basket'] as $id_dish => $item): ?>
                 <tr>
-                    <td class="td-field" id="Image"><img src="../photo/menu/bruschetta/bruschetta1.png" alt="" class="item-img"></td>
-                    <td class="td-field" id="Name">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur
-                        vero recusandae exercitationem similique est nam adipisci?</td>
-                    <td class="td-field" id="Weight">200g</td>
-                    <td class="td-field" id="Quantity">5</td>
-                    <td class="td-field" id="Cost">$250</td>
+                    <td class="td-field" id="Image"><img src="../photo/menu/<?= $item['dish_img'] ?>" alt="<?= $item['dish_name'] ?>" class="item-img"></td>
+                    <td class="td-field" id="Name"><?= $item['dish_name'] ?></td>
+                    <td class="td-field" id="Weight"><?= $item['dish_weight']; ?>g</td>
+                    <td class="td-field" id="Quantity"><?= $item['dish_qty'] ?></td>
+                    <td class="td-field" id="Cost">$<?= $item['dish_cost'] ?></td>
                     <td class="td-field" id="Del"><a href=""><img src="../photo/close.png" alt="del" class="dtn-del"></a>
                     </td>
                 </tr>
-                <tr>
-                    <td class="td-field" id="Image"><img src="../photo/menu/bruschetta/bruschetta1.png" alt="" class="item-img"></td>
-                    <td class="td-field" id="Name">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur
-                        vero recusandae exercitationem similique est nam adipisci?</td>
-                    <td class="td-field" id="Weight">200g</td>
-                    <td class="td-field" id="Quantity">5</td>
-                    <td class="td-field" id="Cost">$250</td>
-                    <td class="td-field" id="Del"><a href=""><img src="../photo/close.png" alt="del" class="dtn-del"></a>
-                    </td>
-                </tr>
-                <tr>
-                    <td class="td-field" id="Image"><img src="../photo/menu/bruschetta/bruschetta1.png" alt="" class="item-img"></td>
-                    <td class="td-field" id="Name">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur
-                        vero recusandae exercitationem similique est nam adipisci?</td>
-                    <td class="td-field" id="Weight">200g</td>
-                    <td class="td-field" id="Quantity">5</td>
-                    <td class="td-field" id="Cost">$250</td>
-                    <td class="td-field" id="Del"><a href=""><img src="../photo/close.png" alt="del" class="dtn-del"></a>
-                    </td>
-                </tr>
+                <?php endforeach; ?>
             </table>
             <div class="basket-footer container">
                 <a class="clear-the-basket" id="clear-cart">Clear the basket</a>
-                <div class="total-sum">Total: $300</div>
+                <div class="total-sum">Total: $<?= $_SESSION['basket.sum'] ?></div>
                 <a class="make-an-order">Make an order</a>
             </div>
         </main>

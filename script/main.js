@@ -5,7 +5,7 @@ $(function () {
         let id = $(this).data('id'); // звертаємося до посилання кнопки та дістаємо значення id із data-id
 
         $.ajax({
-            url: '../basket.php', // куди відправити запит
+            url: '../basket-logic.php', // куди відправити запит
             type: 'GET', // метод запиту
             data: { basket: 'add', id: id }, // дані, що передаються у масиві
             dataType: 'json', // метод запиту
