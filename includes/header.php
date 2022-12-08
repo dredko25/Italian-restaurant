@@ -15,7 +15,7 @@
                     <a href="<?= $res = $choice ? "#menu"  : "/index.php#menu" ?>" class="menu-link">Menu</a>
                 </li>
                 <li class="menu-item">
-                    <a href="" class="menu-link">Basket <span class="item-qty">15</span></a>
+                    <a href="<?= $res = $choice ? "pages/basket.php"  : "../pages/basket.php" ?>" class="menu-link">Basket <span class="item-qty">15</span></a>
                 </li>
                 <li class="menu-item">
                     <a href="#contacts" class="menu-link">Contacts</a>

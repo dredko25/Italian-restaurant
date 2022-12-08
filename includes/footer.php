@@ -3,15 +3,15 @@
     <div class="footer-content">
         <div class="social-media">
             <a href="https://www.instagram.com/" target="_blank" class="inst">
-                <img src="photo/instagram.png" alt="logo" class="media-logo">
+                <img src="<?= $res = $choice ? "photo/instagram.png"  : "../photo/instagram.png" ?>" alt="logo" class="media-logo">
             </a>
             <a href="https://www.facebook.com/" target="_blank" class="facebook">
-                <img src="photo/facebook.png" alt="logo" class="media-logo">
+                <img src="<?= $res = $choice ? "photo/facebook.png"  : "../photo/facebook.png" ?>" alt="logo" class="media-logo">
             </a>
         </div>
         <div class="footer-center">
-            <a href="#home" class="footer-logo">
-                <img src="photo/restaurant-logo.png" alt="logo" class="photo-logo">
+            <a href="<?= $res = $choice ? "#home"  : "/index.php" ?>" class="footer-logo">
+                <img src="<?= $res = $choice ? "photo/restaurant-logo.png"  : "../photo/restaurant-logo.png" ?>" alt="logo" class="photo-logo">
                 <h1 class="name-restaurant">Bruschetta</h1>
             </a>
             <div class="hours">Working hours: 10:00 - 22:00</div>

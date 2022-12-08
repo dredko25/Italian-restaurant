@@ -25,7 +25,7 @@ $check = header_choice('page');
 
 <body>
     <div class="wrapper">
-        <?php include "../includes/header-pages.php"; ?>
+        <?php include "../includes/header.php"; ?>
         <main class="main container-menu">
             <h1 class="category-name">Pizza</h1>
             <ul class="category-items">
@@ -38,7 +38,7 @@ $check = header_choice('page');
                             <p class="item-weight"><?php echo $dish['dish_weight']; ?>g</p>
                             <div class="button">
                                 <div class="item-price">$<?php echo $dish['dish_cost']; ?></div>
-                                <a href="?busket=add&id=<?= $dish['id_dish'] ?>" class="buy add-to-busket" data-id="<?= $dish['id_dish'] ?>">Add to Busket</a>
+                                <a href="?basket=add&id=<?= $dish['id_dish'] ?>" class="buy add-to-basket" data-id="<?= $dish['id_dish'] ?>">Add to Basket</a>
                             </div>
                         </div>
                     </li>
@@ -46,7 +46,7 @@ $check = header_choice('page');
             </ul>
 
         </main>
-        <?php include "../includes/footer-pages.php"; ?>
+        <?php include "../includes/footer.php"; ?>
     </div>
 
     <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>

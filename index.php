@@ -24,7 +24,7 @@ $check = header_choice('main');
 <body>
     <div class="wrapper">
         <a id="home" class="in-page-link"></a>
-        <?php include "includes/header-pages.php"; ?>
+        <?php include "includes/header.php"; ?>
         <main class="page">
             <div class="slider">
                 <div id="photo1" class="slide fade"></div>
@@ -61,7 +61,7 @@ $check = header_choice('main');
                 </section>
             </div>
         </main>
-        <?php include "includes/footer-main.php"; ?>
+        <?php include "includes/footer.php"; ?>
     </div>
     <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
     <script src="script/burger.js"></script>

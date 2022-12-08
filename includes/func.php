@@ -43,13 +43,13 @@ function get_product(int $id): array
     return $stmt->fetch(); // Отримує наступний рядок із набору результатів
 }
 
-function add_to_busket($product): void
+function add_to_basket($product): void
 {
-    if (isset($_SESSION['busket'][$product['id_dish']])) { // якщо тавар вже є в кошику додаємо до кількості 1
-        $_SESSION['busket'][$product['id_dish']]['qty'] += 1;
+    if (isset($_SESSION['basket'][$product['id_dish']])) { // якщо тавар вже є в кошику додаємо до кількості 1
+        $_SESSION['basket'][$product['id_dish']]['qty'] += 1;
     } 
     else { // якщо немає, то створюємо цей товар
-        $_SESSION['busket'][$product['id_dish']] = [
+        $_SESSION['basket'][$product['id_dish']] = [
             'dish_name' => $product['dish_name'],
             'dish_weight' => $product['dish_weight'],
             'dish_cost' => $product['dish_cost'],
@@ -58,6 +58,6 @@ function add_to_busket($product): void
         ];
     }
 
-    $_SESSION['busket.qty'] = !empty($_SESSION['busket.qty']) ? ++$_SESSION['busket.qty'] : 1; // кількість - якщо така страва вже є в кошику, то збільшуємо на 1, якшо ні, кількість = 1
-    $_SESSION['busket.sum'] = !empty($_SESSION['busket.sum']) ? $_SESSION['busket.sum'] + $product['dish_cost'] : $product['dish_cost']; // аналогічна ситуація із сумою: якщо сума != 0, то до поточної + вартість тільки що доданого товару, а якщо порожня, то записуємо значення вартості тільки що доданого товару
+    $_SESSION['basket.qty'] = !empty($_SESSION['basket.qty']) ? ++$_SESSION['basket.qty'] : 1; // кількість - якщо така страва вже є в кошику, то збільшуємо на 1, якшо ні, кількість = 1
+    $_SESSION['basket.sum'] = !empty($_SESSION['basket.sum']) ? $_SESSION['basket.sum'] + $product['dish_cost'] : $product['dish_cost']; // аналогічна ситуація із сумою: якщо сума != 0, то до поточної + вартість тільки що доданого товару, а якщо порожня, то записуємо значення вартості тільки що доданого товару
 }
