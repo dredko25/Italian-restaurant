@@ -14,11 +14,9 @@
             <li class="menu-item">
                 <a href="<?= $res = $choice ? "#menu"  : "/index.php#menu" ?>" class="menu-link">Menu</a>
             </li>
-            <?php if (!empty($_SESSION['basket'])) : ?>
-                <li class="menu-item">
-                    <a href="<?= $res = $choice ? "pages/basket.php"  : "../pages/basket.php" ?>" class="menu-link">Basket</a>
-                </li>
-            <?php endif; ?>
+            <li class="menu-item">
+                <a href="<?= $res = $choice ? "pages/basket.php"  : "../pages/basket.php" ?>" class="menu-link">Basket</a>
+            </li>
             <li class="menu-item">
                 <a href="#contacts" class="menu-link">Contacts</a>
             </li>

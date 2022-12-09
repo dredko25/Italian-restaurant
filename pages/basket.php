@@ -27,6 +27,7 @@ $check = header_choice('page');
         <?php include "../includes/header.php"; ?>
         <main class="page">
             <h1 class="category-name">Basket</h1>
+            <?php if (!empty($_SESSION['basket'])) : ?>
             <table class="basket-table container">
                 <tr>
                     <th class="th-header">Image</th>
@@ -43,19 +44,25 @@ $check = header_choice('page');
                     <td class="td-field" id="Weight"><?= $item['dish_weight']; ?>g</td>
                     <td class="td-field" id="Quantity"><?= $item['dish_qty'] ?></td>
                     <td class="td-field" id="Cost">$<?= $item['dish_cost'] ?></td>
-                    <td class="td-field" id="Del"><a href=""><img src="../photo/close.png" alt="del" class="dtn-del"></a>
+                    <td class="td-field" id="Del"><a href="?basket=delete&id=<?= $item['id_dish'] ?>" class="del-from-basket"><img src="../photo/close.png" alt="del" class="btn-del"></a>
                     </td>
                 </tr>
                 <?php endforeach; ?>
             </table>
             <div class="basket-footer container">
-                <a class="clear-the-basket" id="clear-cart">Clear the basket</a>
+                <a class="clear-the-basket" id="clear-basket" onClick="document.location.reload(true)">Clear the basket</a>
                 <div class="total-sum">Total: $<?= $_SESSION['basket.sum'] ?></div>
-                <a class="make-an-order">Make an order</a>
+                <a class="make-an-order" id="make-order">Make an order</a>
             </div>
+            <?php else: ?>
+                <p class="basket-is-empty container">The basket is empty</p>
+            <?php endif; ?>
         </main>
         <?php include "../includes/footer.php"; ?>
     </div>
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+    <script src="../script/burger.js"></script>
+    <script src="../script/main.js"></script>
 </body>
 
 </html>

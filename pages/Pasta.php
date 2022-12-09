@@ -44,7 +44,7 @@ $check = header_choice('page');
                     </li>
                 <?php endforeach; ?>
             </ul>
-
+            <div id="pop-up" class="container">Added to basket</div>
         </main>
         <?php include "../includes/footer.php"; ?>
     </div>

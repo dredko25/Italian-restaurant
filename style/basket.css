@@ -43,7 +43,7 @@
     text-align: center;
 }
 
-.dtn-del {
+.btn-del {
     width: 28px;
     height: 28px;
 }
@@ -97,4 +97,10 @@
 .clear-the-basket:hover {
     color: white;
     box-shadow: inset -250px 0 #941f19;
+}
+
+.basket-is-empty {
+    text-align: center;
+    font-size: 36px;
+    margin-top: 20px;
 }
