@@ -34,7 +34,7 @@ if (isset($_GET['basket'])) { // Визначає, чи змінна оголо�
         case 'clear':
             if (!empty($_SESSION['basket'])) {
                 unset($_SESSION['basket']);
-                unset($_SESSION['basket.qty']);
+                unset($_SESSION['basket.sum']);
             }
             // require "pages/basket.php";
             break;

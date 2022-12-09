@@ -6,6 +6,7 @@
 .th-header {
     font-size: 28px;
     height: 60px;
+    padding: 0px 10px;
 }
 
 .td-field {
@@ -77,6 +78,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    margin: 0px 15px;
 }
 
 .make-an-order {

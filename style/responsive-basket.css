@@ -1,0 +1,70 @@
+@media (min-width: 500px) and (max-width: 769px) {
+
+    #Image,
+    .Image {
+        display: none;
+    }
+
+    .th-header {
+        font-size: 24px;
+    }
+
+    .td-field {
+        height: 60px;
+        font-size: 24px;
+    }
+
+    #Name {
+        width: 45%;
+    }
+
+    .make-an-order,
+    .clear-the-basket {
+        height: 60px;
+        width: 187.5px;
+        font-size: 28px;
+        margin: 0px 15px;
+    }
+
+    .total-sum {
+        font-size: 28px;
+    }
+}
+
+@media (max-width: 499px) {
+
+    #Image,
+    .Image {
+        display: none;
+    }
+
+    .th-header {
+        font-size: 18px;
+    }
+
+    .td-field {
+        height: 40px;
+        font-size: 18px;
+    }
+
+    #Name {
+        width: 45%;
+    }
+
+    .make-an-order,
+    .clear-the-basket {
+        height: 50px;
+        width: 156.25px;
+        font-size: 18px;
+        margin: 0px 15px;
+    }
+
+    .total-sum {
+        font-size: 24px;
+    }
+
+    .btn-del {
+        width: 18px;
+        height: 18px;
+    }
+}

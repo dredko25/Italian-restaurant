@@ -19,6 +19,9 @@ $check = header_choice('page');
     <link rel="stylesheet" href="../style/responsive.css">
     <link rel="stylesheet" href="../style/responsive-menu.css">
     <link rel="stylesheet" href="../style/basket.css">
+    <link rel="stylesheet" href="../style/responsive-basket.css">
+
+    <link rel="icon" type="image/png" sizes="32x32" href="../photo/favicon.png">
 </head>
 
 <body>
@@ -30,12 +33,12 @@ $check = header_choice('page');
             <?php if (!empty($_SESSION['basket'])) : ?>
             <table class="basket-table container">
                 <tr>
-                    <th class="th-header">Image</th>
-                    <th class="th-header">Name</th>
-                    <th class="th-header">Weight</th>
-                    <th class="th-header">Quantity</th>
-                    <th class="th-header">Cost</th>
-                    <th class="th-header">Del</th>
+                    <th class="th-header Image">Image</th>
+                    <th class="th-header Name">Name</th>
+                    <th class="th-header Weight">Weight</th>
+                    <th class="th-header Quantity">Quantity</th>
+                    <th class="th-header Cost">Cost</th>
+                    <th class="th-header Del">Del</th>
                 </tr>
                 <?php foreach ($_SESSION['basket'] as $id_dish => $item): ?>
                 <tr>
