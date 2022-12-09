@@ -40,14 +40,14 @@ $check = header_choice('page');
                     <th class="th-header Cost">Cost</th>
                     <th class="th-header Del">Del</th>
                 </tr>
-                <?php foreach ($_SESSION['basket'] as $id_dish => $item): ?>
+                <?php foreach ($_SESSION['basket'] as $id => $item): ?>
                 <tr>
                     <td class="td-field" id="Image"><img src="../photo/menu/<?= $item['dish_img'] ?>" alt="<?= $item['dish_name'] ?>" class="item-img"></td>
                     <td class="td-field" id="Name"><?= $item['dish_name'] ?></td>
                     <td class="td-field" id="Weight"><?= $item['dish_weight']; ?>g</td>
                     <td class="td-field" id="Quantity"><?= $item['dish_qty'] ?></td>
                     <td class="td-field" id="Cost">$<?= $item['dish_cost'] ?></td>
-                    <td class="td-field" id="Del"><a href="?basket=delete&id=<?= $item['id_dish'] ?>" class="del-from-basket"><img src="../photo/close.png" alt="del" class="btn-del"></a>
+                    <td class="td-field" id="Del"><a href="?basket=delete&id=<?= $item['id_dish'] ?>" class="del-from-basket" data-id="<?= $item['id_dish'] ?>" onClick="document.location.reload(true)"><img src="../photo/close.png" alt="del" class="btn-del"></a>
                     </td>
                 </tr>
                 <?php endforeach; ?>

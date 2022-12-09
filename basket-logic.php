@@ -20,13 +20,12 @@ if (isset($_GET['basket'])) { // Визначає, чи змінна оголо�
             break;
         case 'delete':
             $id = isset($_GET['id']) ? (int)$_GET['id'] : 0;
-            // if(!$id) exit();
-            $itemDel = array_search($id, $_SESSION['basket']);
-            if($itemDel !== false){
-                unset($_SESSION['basket'][$itemDel]);
+            if ($_SESSION['basket'][$id]) {
+                $product = get_product($id);
+                del_from_basket($product);
+                unset($_SESSION['basket'][$id]);
                 echo json_encode(['code' => 'ok', 'answer' => $_SESSION['basket']]);
-            }
-            else{
+            } else {
                 echo json_encode(['code' => 'error', 'answer' => 'Error product']);
             }
 
@@ -36,7 +35,6 @@ if (isset($_GET['basket'])) { // Визначає, чи змінна оголо�
                 unset($_SESSION['basket']);
                 unset($_SESSION['basket.sum']);
             }
-            // require "pages/basket.php";
             break;
     }
 }
