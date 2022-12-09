@@ -55,7 +55,7 @@ $check = header_choice('page');
             <div class="basket-footer container">
                 <a class="clear-the-basket" id="clear-basket" onClick="document.location.reload(true)">Clear the basket</a>
                 <div class="total-sum">Total: $<?= $_SESSION['basket.sum'] ?></div>
-                <a class="make-an-order" id="make-order">Make an order</a>
+                <a href="profile.php" class="make-an-order" id="make-order">Make an order</a>
             </div>
             <?php else: ?>
                 <p class="basket-is-empty container">The basket is empty</p>
