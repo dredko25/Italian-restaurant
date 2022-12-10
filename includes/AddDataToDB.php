@@ -1,5 +1,8 @@
 <?php
+
 require_once "db.php";
+require_once "func.php";
+session_start();
 global $pdo;
 
 $queryAddress = 'INSERT INTO Address_(street, house, apartment) VALUES (:street, :house, :apartment)';
@@ -18,7 +21,12 @@ $queryBasket = 'INSERT INTO Basket(id_buyer, total_sum) VALUES (:id_buyer, :tota
 $userBasket = $pdo->prepare($queryBasket);
 $userBasket->execute(['id_buyer' => $u_id, 'total_sum' => $_SESSION['basket.sum']]);
 
+$b_id = $pdo->lastInsertId();
+
+foreach ($_SESSION['basket'] as $dish){
+    $queryOrder = 'INSERT INTO Order_(id_basket, id_dish, number_of_servings) VALUES (:id_basket, :id_dish, :number_of_servings)';
+    $userOrder = $pdo->prepare($queryOrder);
+    $userOrder->execute(['id_basket' => $b_id, 'id_dish' => $dish['id_dish'], 'number_of_servings' => $dish['dish_qty']]);
+}
+
 header("Location: ../index.php");
-
-
-?>
