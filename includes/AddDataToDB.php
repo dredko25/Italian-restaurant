@@ -5,15 +5,9 @@ require_once "func.php";
 session_start();
 global $pdo;
 
-$queryAddress = 'INSERT INTO Address_(street, house, apartment) VALUES (:street, :house, :apartment)';
-$addressINFO = $pdo->prepare($queryAddress);
-$addressINFO->execute(['street' => $_POST['user_street'], 'house' => $_POST['user_house'], 'apartment' => $_POST['user_apartment']]);
-
-$a_id = $pdo->lastInsertId();
-
-$queryBuyer = 'INSERT INTO Buyer(buyer_name, buyer_surname, buyer_phone, buyer_email, id_address) VALUES (:name, :surname, :phone, :email, :address_id)';
+$queryBuyer = 'INSERT INTO Buyer(buyer_name, buyer_surname, buyer_phone, buyer_email, street, house, apartment) VALUES (:name, :surname, :phone, :email, :street, :house, :apartment)';
 $userINFO = $pdo->prepare($queryBuyer);
-$userINFO->execute(['name' => $_POST['user_name'], 'surname' => $_POST['user_surname'], 'phone' => $_POST['user_phone'], 'email' => $_POST['user_email'], 'address_id' => $a_id]);
+$userINFO->execute(['name' => $_POST['user_name'], 'surname' => $_POST['user_surname'], 'phone' => $_POST['user_phone'], 'email' => $_POST['user_email'], 'street' => $_POST['user_street'], 'house' => $_POST['user_house'], 'apartment' => $_POST['user_apartment']]);
 
 $u_id = $pdo->lastInsertId();
 
@@ -30,3 +24,5 @@ foreach ($_SESSION['basket'] as $dish){
 }
 
 header("Location: ../index.php");
+
+

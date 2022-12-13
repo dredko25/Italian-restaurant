@@ -56,7 +56,7 @@ $(function () {
     $('.buy').on('click', function () {
         $("#pop-up").show();
         setTimeout(function () { $("#pop-up").hide(); }, 1000);
-    });  
+    });
 
 
 });
