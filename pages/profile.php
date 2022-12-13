@@ -54,7 +54,7 @@ $check = header_choice('page');
                     <input type="text" id="user-apartment" placeholder="Apartment" name="user_apartment">
                 </div>
                 <div class="form-footer container">
-                    <input type="submit" value="Make an order" class="make-an-order" id="make-order">
+                    <div id="mouseover"><input type="submit" value="Make an order" class="make-order-input" id="make-order-input"></div>
                 </div>
             </form>
         </main>

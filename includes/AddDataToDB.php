@@ -24,5 +24,3 @@ foreach ($_SESSION['basket'] as $dish){
 }
 
 header("Location: ../index.php");
-
-
