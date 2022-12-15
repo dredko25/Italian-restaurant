@@ -46,7 +46,7 @@ function add_to_basket($product): void
 {
     if (isset($_SESSION['basket'][$product['id_dish']])) { // якщо тавар вже є в кошику додаємо до кількості 1
         $_SESSION['basket'][$product['id_dish']]['dish_qty'] += 1;
-    } else { // якщо немає, то створюємо цей товар
+    } else { // якщо немає, то створюємо
         $_SESSION['basket'][$product['id_dish']] = [
             'id_dish' => $product['id_dish'],
             'dish_name' => $product['dish_name'],
@@ -58,7 +58,7 @@ function add_to_basket($product): void
     }
 
     $_SESSION['basket.qty'] = !empty($_SESSION['basket.qty']) ? ++$_SESSION['basket.qty'] : 1; // кількість - якщо така страва вже є в кошику, то збільшуємо на 1, якшо ні, кількість = 1
-    $_SESSION['basket.sum'] = !empty($_SESSION['basket.sum']) ? $_SESSION['basket.sum'] + $product['dish_cost'] : $product['dish_cost']; // аналогічна ситуація із сумою: якщо сума != 0, то до поточної + вартість тільки що доданого товару, а якщо порожня, то записуємо значення вартості тільки що доданого товару
+    $_SESSION['basket.sum'] = !empty($_SESSION['basket.sum']) ? $_SESSION['basket.sum'] + $product['dish_cost'] : $product['dish_cost']; // аналогічна ситуація із сумою: якщо сума != 0, то до поточної + вартість тільки що доданої страви, а якщо порожня, то записуємо значення вартості тільки що доданої страви
 }
 
 function del_from_basket($product): void

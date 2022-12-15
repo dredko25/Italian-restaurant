@@ -406,3 +406,21 @@ main {
     font-weight: 300;
     font-size: 18px;
 }
+
+
+/* #pop-up-main {
+    display: none;
+    color: black;
+    background: rgb(255, 255, 255);
+    border-radius: 10px;
+    font-size: 32px;
+    position: fixed;
+    top: 7%;
+    margin: auto;
+    left: 0;
+    right: 0;
+    text-align: center;
+    width: fit-content;
+    padding: 7px;
+    z-index: 101;
+} */

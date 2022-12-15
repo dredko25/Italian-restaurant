@@ -17,10 +17,13 @@ $userBasket->execute(['id_buyer' => $u_id, 'total_sum' => $_SESSION['basket.sum'
 
 $b_id = $pdo->lastInsertId();
 
-foreach ($_SESSION['basket'] as $dish){
+foreach ($_SESSION['basket'] as $dish) {
     $queryOrder = 'INSERT INTO Order_(id_basket, id_dish, number_of_servings) VALUES (:id_basket, :id_dish, :number_of_servings)';
     $userOrder = $pdo->prepare($queryOrder);
     $userOrder->execute(['id_basket' => $b_id, 'id_dish' => $dish['id_dish'], 'number_of_servings' => $dish['dish_qty']]);
 }
+
+unset($_SESSION['basket']);
+unset($_SESSION['basket.sum']);
 
 header("Location: ../index.php");
