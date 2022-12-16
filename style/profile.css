@@ -40,19 +40,23 @@ input:focus {
     width: 250px;
     font-size: 32px;
     font-family: inherit;
-    cursor: pointer;
     border: 2px solid black;
     color: black;
     display: flex;
     align-items: center;
     justify-content: center;
     margin-top: 20px;
+    background-color: #c5c5c5;
+}
+
+.make-order-input:not([disabled]) {
+    cursor: pointer;
     background-color: white;
     box-shadow: inset 0 0 #406E51;
     transition: box-shadow .3s, color .3s;
 }
 
-.make-order-input:hover {
+.make-order-input:hover:not([disabled]) {
     color: white;
     box-shadow: inset 250px 0 #406E51;
 }

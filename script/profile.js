@@ -7,6 +7,8 @@ let checkEmail = false;
 let checkStreet = false;
 let checkHouse = false;
 let checkApartment = false;
+
+
 mainForm.user_name.addEventListener("input", function () {
     let value_uname = mainForm.user_name.value;
     if (value_uname.length < 1 || /\d/.test(value_uname)) { // \d - будь-яке число
@@ -75,7 +77,7 @@ mainForm.user_house.addEventListener("input", function () {
 });
 mainForm.user_apartment.addEventListener("input", function () {
     let value_uapartmet = mainForm.user_apartment.value;
-    if (value_uapartmet.length < 1  || /\D/.test(value_uapartmet) || value_uapartmet == 0) { // \D = !\d
+    if (value_uapartmet.length < 1 || /\D/.test(value_uapartmet) || value_uapartmet == 0) { // \D = !\d
         er("user_apartment");
         checkApartment = false;
     }
@@ -92,13 +94,12 @@ function er(name) {
     document.getElementsByName(name)[0].style.borderColor = "#FF0000";
 }
 
-document.getElementById('mouseover').addEventListener("mouseover", function() {
-    if (checkName && checkSurname && checkPhone && checkEmail && checkStreet && checkHouse && checkApartment){
+mainForm.addEventListener("keyup", function () {
+    if (checkName && checkSurname && checkPhone && checkEmail && checkStreet && checkHouse && checkApartment) {
         document.getElementById('make-order-input').disabled = false;
     }
-    else{
+    else {
         document.getElementById('make-order-input').disabled = true;
     }
 });
-
 
