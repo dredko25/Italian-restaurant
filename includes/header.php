@@ -5,6 +5,12 @@
             <h1 class="name-restaurant">Bruschetta</h1>
         </a>
         <ul class="menu-list">
+            <li class="menu-item ">
+                <form action="" method="post" class="form-menu">
+                    <input name="search" placeholder="Search..." type="search">
+                    <input id="icon-search" type="submit" name="submit_search" value="">
+                </form>
+            </li>
             <li class="menu-item">
                 <a href="<?= $res = $choice ? "#home"  : "/index.php#home" ?>" class="menu-link">Home</a>
             </li>
