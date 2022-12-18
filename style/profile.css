@@ -31,10 +31,6 @@ input:focus {
     width: fit-content;
 }
 
-#mouseover{
-    padding: 2px;
-}
-
 .make-order-input {
     height: 80px;
     width: 250px;

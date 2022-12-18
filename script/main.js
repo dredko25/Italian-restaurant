@@ -57,11 +57,5 @@ $(function () {
         $("#pop-up").show();
         setTimeout(function () { $("#pop-up").hide(); }, 1000);
     });
-
-    // $('#make-order-input').on('click', function () {
-    //     $("#pop-up-main").show();
-    //     setTimeout(function () { $("#pop-up").hide(); }, 5000);
-    // });
-
 });
 
