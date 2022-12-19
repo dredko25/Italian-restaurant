@@ -15,8 +15,9 @@ $check = header_choice('main');
     <title>Bruschetta</title>
     <link href="https://fonts.googleapis.com/css?family=Great+Vibes:regular&display=swap" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css?family=Saira+Condensed:300,regular&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="style/style.css">
-    <link rel="stylesheet" href="style/responsive.css">
+    <link rel="stylesheet" href="/style/style.css">
+    <link rel="stylesheet" href="/style/responsive.css">
+    <link rel="stylesheet" href="/style/styleSearch.css">
 
     <link rel="icon" type="image/png" sizes="32x32" href="photo/favicon.png">
 </head>
@@ -25,7 +26,8 @@ $check = header_choice('main');
     <div class="wrapper">
         <a id="home" class="in-page-link"></a>
         <?php include "includes/header.php"; ?>
-        <main class="page">
+        <div id="display" class="container"></div>
+        <main id="index-main" class="page">
             <div class="slider">
                 <div id="photo1" class="slide fade"></div>
                 <div id="photo2" class="slide fade"></div>

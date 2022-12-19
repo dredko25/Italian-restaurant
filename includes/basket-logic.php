@@ -1,7 +1,7 @@
 <?php
 session_start(); // створює сеанс або відновлює поточний на основі ідентифікатора сеансу, переданого через запит GET або POST або через файл cookie
-require_once "includes/db.php";
-require_once "includes/func.php";
+require_once "db.php";
+require_once "func.php";
 
 if (isset($_GET['basket'])) { // Визначає, чи змінна оголошена та відрізняється від null
     switch ($_GET['basket']) {

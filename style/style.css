@@ -217,6 +217,11 @@ main {
     flex: 1 1 auto;
 }
 
+#display {
+    margin-top: 170px;
+    display: none;
+}
+
 .main-block {
     position: absolute;
     display: flex;
@@ -435,20 +440,8 @@ main {
     font-size: 18px;
 }
 
-
-/* #pop-up-main {
-    display: none;
-    color: black;
-    background: rgb(255, 255, 255);
-    border-radius: 10px;
-    font-size: 32px;
-    position: fixed;
-    top: 7%;
-    margin: auto;
-    left: 0;
-    right: 0;
+.res-is-empty {
     text-align: center;
-    width: fit-content;
-    padding: 7px;
-    z-index: 101;
-} */
+    font-size: 36px;
+    margin-top: 20px;
+}

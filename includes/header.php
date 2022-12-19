@@ -7,8 +7,8 @@
         <ul class="menu-list">
             <li class="menu-item ">
                 <form action="" method="post" class="form-menu">
-                    <input name="search" placeholder="Search..." type="search">
-                    <input id="icon-search" type="submit" name="submit_search" value="">
+                    <input id="search" name="search" placeholder="Search..." type="search">
+                    <input id="icon-search" type="button" name="submit_search" value="">
                 </form>
             </li>
             <li class="menu-item">

@@ -1,44 +1,27 @@
-body {
-    color: #000;
-}
-.header {
-    background-image: url(../photo/background2_1.png);
-    background-size: cover;
-    position: absolute;
-}
-
-.container-menu {
-    max-width: 1550px;
-    margin: 0 auto;
-    padding: 0px 15px;
-    color: inherit;
-    font-family: 'Saira Condensed';
-}
-
-.category-name {
+.category-name-search {
     color: black;
     font-family: 'Great Vibes';
     font-style: normal;
     font-weight: 400;
     font-size: 72px;
     width: 100%;
-    margin-top: 170px;
+    text-align: center;
 }
 
-.category-items {
+.category-items-search {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     margin: 10px;
 }
 
-.category-item {
+.category-item-search {
     border: 1px solid black;
     width: 285px;
     margin: 0.5%;
 }
 
-.item {
+.item-search {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -46,7 +29,7 @@ body {
     height: 100%;
 }
 
-.item-photo {
+.item-photo-search {
     width: 100%;
     object-fit: cover;
 }
@@ -144,8 +127,26 @@ body {
     z-index: 101;
 }
 
-.res-is-empty {
-    text-align: center;
-    font-size: 36px;
-    margin-top: 20px;
+@media (min-width: 662px) and (max-width: 961px) {
+    .category-items-search {
+        max-width: 582px;
+    }
+}
+
+@media (min-width: 962px) and (max-width: 1267px) {
+    .category-items-search {
+        max-width: 882px;
+    }
+}
+
+@media (min-width: 1268px) and (max-width: 1590px) {
+    .category-items-search {
+        max-width: 1188px;
+    }
+}
+
+@media (min-width: 1591px) {
+    .category-items-search {
+        width: 1500px;
+    }
 }
